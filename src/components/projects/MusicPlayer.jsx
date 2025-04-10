@@ -3,17 +3,17 @@ import React from 'react'
 import Icon from '../icon'
 
 const MusicPlayer = ({ onDemoClick }) => {
-    
+
   return (
-    <div className="flex flex-col bg-gray-500/20 p-6 rounded-lg">
+    <div className="flex flex-col">
           <h3 className={`${firaCode.className} text-xl text-teal-300 mb-4`}>
             React Native Music Player
           </h3>
           <div className="flex flex-col md:flex-row items-start md:gap-10">
             <div className="flex md:flex-col items-center gap-10 md:gap-3 ">
               <div className="flex gap-3">
-                <img src="/music-app1.png" alt="music-app" className="h-28" />
-                <img src="/music-app2.png" alt="music-app" className="h-28" />
+                <img src="/music-app1.png" alt="music-app" className="h-40" />
+                <img src="/music-app2.png" alt="music-app" className="h-40" />
               </div>
 
               <div className="flex items-baseline gap-5 md:gap-10">
@@ -26,14 +26,14 @@ const MusicPlayer = ({ onDemoClick }) => {
                   <Icon name="GitHub" />
                 </a>
                 <button
-                  onClick={onDemoClick}
+                  onClick={() => onDemoClick('music')}
                   className="mb-2 text-neutral-300 hover:text-teal-400 transition-colors duration-300"
                 >
                   <Icon name="Demo" />
                 </button>
               </div>
             </div>
-            <div>
+            <div className=' bg-gray-500/20 p-6 rounded-lg'>
               <p
                 className={`${poppins.className} max-w-full md:max-w-[600px] lg:max-w-[800px] mt-5 md:mt-0`}
               >

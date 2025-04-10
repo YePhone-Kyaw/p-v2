@@ -1,10 +1,11 @@
 import Navbar from "../components/Navbar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Experience from "./pages/Experience";
+import Experience from "./pages/Projects";
 import Hero from "./pages/Hero";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
+import Awards from "./pages/Awards";
 
 export default function Home() {
   return (
@@ -12,8 +13,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Experience />
       <Projects />
+      <Awards />
       <Skills />
       <Contact />
     </main>
