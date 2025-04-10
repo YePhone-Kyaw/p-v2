@@ -42,7 +42,7 @@ const ReactScheduler = ({ onDemoClick }) => {
               <li>Visual shift scheduling via interactive calendar interface</li>
               <li>AI-driven automatic schedule generation with configurable parameters:
                 <ul className="list-[circle] marker:text-blue-400 pl-5 mt-1">
-                  <li>Planning horizon (1-4 weeks)</li>
+                  <li>Planning horizon</li>
                   <li>Role-specific staffing requirements</li>
                   <li>Departmental allocations (Dining: Host/Server/Busser, Kitchen: Cook)</li>
                 </ul>
