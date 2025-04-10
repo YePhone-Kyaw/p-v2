@@ -50,7 +50,7 @@ const Experience = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <video
-            src={showVideo === 'music' ? '/music-app-demo.mp4' : '/PowerShiftDemo.mp4'}
+            src={showVideo === 'music' ? '/music-app-demo.mp4' : '/power-shift-demo.mp4'}
             controls
             autoPlay
             className="w-full max-h-[80vh] rounded-lg shadow-lg object-contain"
