@@ -11,7 +11,7 @@ const MusicPlayer = ({ onDemoClick }) => {
           </h3>
           <div className="flex flex-col md:flex-row items-start md:gap-10">
             <div className="flex md:flex-col items-center gap-10 md:gap-3 ">
-              <div className="flex gap-3">
+              <div className="flex gap-3 mb-3">
                 <img src="/music-app1.png" alt="music-app" className="h-40" />
                 <img src="/music-app2.png" alt="music-app" className="h-40" />
               </div>

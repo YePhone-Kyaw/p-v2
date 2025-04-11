@@ -10,7 +10,7 @@ const ReactScheduler = ({ onDemoClick }) => {
       </h3>
       <div className="flex flex-col md:flex-row items-start md:gap-10">
         <div className="flex md:flex-col items-center gap-10 md:gap-3">
-          <div className="flex gap-3">
+          <div className="flex gap-3 mb-3">
             <img src="/logo.png" alt="scheduler" className=" w-40" />
           </div>
           <div className="flex items-baseline gap-5 md:gap-10">
@@ -40,7 +40,7 @@ const ReactScheduler = ({ onDemoClick }) => {
             <ul className="list-disc marker:text-teal-400 pl-5 mt-2 space-y-2">
               <li>Employee lifecycle management (onboarding, role updates, and offboarding)</li>
               <li>Visual shift scheduling via interactive calendar interface</li>
-              <li>AI-driven automatic schedule generation with configurable parameters:
+              <li>Automatic schedule generation with configurable parameters:
                 <ul className="list-[circle] marker:text-blue-400 pl-5 mt-1">
                   <li>Planning horizon</li>
                   <li>Role-specific staffing requirements</li>

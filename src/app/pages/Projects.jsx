@@ -6,7 +6,13 @@ import ReactScheduler from "@/components/projects/ReactScheduler";
 import { firaCode, poppins } from "@/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import React, { useEffect, useRef, useState } from "react";
+
+const YouTube_Ids = {
+  music: 'https://youtube.com/embed/RaE6K1q_BSM?si=F49Sljtw2dJzwM6y',
+  scheduler: 'https://www.youtube.com/embed/vd9YsnM-0nU?si=9axGCpgvRdA6oF-c'
+}
 
 const Experience = () => {
   const [showVideo, setShowVideo] = useState(null);
@@ -19,6 +25,20 @@ const Experience = () => {
     setShowVideo(null);
   };
 
+  const container = useRef(null);
+  gsap.registerPlugin(useGSAP, ScrollTrigger)
+
+  useGSAP(() => {
+    gsap.from('.title', {opacity: 0,
+      x: 300,
+      duration: 2,
+      scrollTrigger: {
+        trigger: '.title, .photo',
+        start: 'top center',
+      },
+    })
+  })
+
   useEffect(() => {
     if (showVideo) {
       document.body.style.overflow = "hidden";
@@ -30,14 +50,14 @@ const Experience = () => {
   return (
     <section
     id="projects"
-    className="flex flex-col min-h-screen w-full items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
+    className="flex flex-col min-h-screen w-full items-center justify-center py-10 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
   >
     <div className="w-full max-w-5xl">
-      <div className={`${firaCode.className} flex items-center gap-5 mb-10`}>
+      <div className={`title ${firaCode.className} flex items-center gap-5 mb-10`}>
         <h1 className="flex text-2xl text-teal-300">Projects</h1>
         <span className="bg-teal-300 w-[100px] h-[1px]"></span>
       </div>
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col gap-20 ">
         <MusicPlayer onDemoClick={handleDemoClick} />
         <ReactScheduler onDemoClick={handleDemoClick} />
       </div>
@@ -49,12 +69,15 @@ const Experience = () => {
           className="relative w-full max-w-4xl mx-auto p-4"
           onClick={(e) => e.stopPropagation()}
         >
-          <video
-            src={showVideo === 'music' ? '/music-app-demo.mp4' : '/power-shift-demo.mp4'}
-            controls
-            autoPlay
-            className="w-full max-h-[80vh] rounded-lg shadow-lg object-contain"
-          ></video>
+          <iframe 
+          width='100%'
+          height={500}
+          src={YouTube_Ids[showVideo]}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="YouTube video player"
+          className="w-full max-h-[80vh] rounded-lg shadow-lg object-contain"
+          />
           <button
             onClick={handleCloseVideo}
             className="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2 hover:bg-gray-700 transition-colors duration-300"
