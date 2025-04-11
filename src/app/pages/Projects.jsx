@@ -29,15 +29,16 @@ const Experience = () => {
   gsap.registerPlugin(useGSAP, ScrollTrigger)
 
   useGSAP(() => {
-    gsap.from('.title', {opacity: 0,
+    gsap.from('.title', {
+      opacity: 0,
       x: 300,
       duration: 2,
       scrollTrigger: {
-        trigger: '.title, .photo',
+        trigger: '.title',
         start: 'top center',
       },
     })
-  })
+  }, {scope: container})
 
   useEffect(() => {
     if (showVideo) {
@@ -52,7 +53,7 @@ const Experience = () => {
     id="projects"
     className="flex flex-col min-h-screen w-full items-center justify-center py-10 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
   >
-    <div className="w-full max-w-5xl">
+    <div ref={container} className="w-full max-w-5xl">
       <div className={`title ${firaCode.className} flex items-center gap-5 mb-10`}>
         <h1 className="flex text-2xl text-teal-300">Projects</h1>
         <span className="bg-teal-300 w-[100px] h-[1px]"></span>

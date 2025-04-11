@@ -1,5 +1,4 @@
 "use client";
-
 import { firaCode, poppins } from "@/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -37,7 +36,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col min-h-screen w-full items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
+      className="flex flex-col h-screen w-full items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
     >
       <div ref={container} className="w-full max-w-5xl">
         <div
