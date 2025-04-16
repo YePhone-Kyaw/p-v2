@@ -9,7 +9,7 @@ import Awards from "./pages/Awards";
 
 export default function Home() {
   return (
-    <main className="flex flex-col bg-background">
+    <main className="flex flex-col">
       <Navbar />
       <Hero />
       <About />

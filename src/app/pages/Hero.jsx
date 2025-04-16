@@ -5,6 +5,8 @@ import { socialMedia } from "../constants";
 import Icon from "../../components/icon";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { TypeAnimation } from "react-type-animation";
+import { firaCode, poppins } from "@/fonts/fonts";
 
 const Hero = () => {
 
@@ -17,10 +19,26 @@ const Hero = () => {
   return (
     <section id="top" ref={container} className="flex items-center justify-center min-h-screen px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32">
   <div className=" box w-full max-w-5xl">
-        <div className="flex flex-col gap-6">
-          <h1 className="text-5xl md:text-6xl font-sans font-bold">Ye Phone Kyaw</h1>
-          <h5 className="text-xl md:text-2xl text-teal-400">Software Developer</h5>
-          <p className="text-lg">
+        <div className='flex flex-col gap-6'>
+        <h5 className="text-xl md:text-2xl text-teal-400">Hi, my name is </h5>
+        <div className={`${firaCode.className}`}>
+        <h1 className="text-5xl md:text-6xl font-sans font-bold mb-5">Ye Phone Kyaw</h1>
+          <TypeAnimation 
+          preRenderFirstString={true}
+          sequence={[
+          'I build Web Applications',
+          50,
+          'I build Mobile Application',
+          50,
+        ]}
+        speed={30}
+        // style={{ fontWeight: 'bold'}}
+        className="text-xl md:text-2xl font-bold text-teal-400" 
+        repeat={Infinity}/>
+        </div>
+          
+          {/* <h5 className="">Software Developer</h5> */}
+          <p className={`${poppins.className} text-xl`}>
             I'm a junior software developer based in Calgary, Alberta, Canada. I'm
             passionate about coding and problem-solving. Additionally, I'm eager to learn new technologies, sharpen and improve my data structure and algorithms skills. 
           </p>

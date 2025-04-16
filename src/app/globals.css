@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0e0b46;
+    --background: radial-gradient(circle,rgba(9, 0, 41, 1) 26%, rgba(8, 8, 117, 1) 68%, rgba(12, 27, 28, 1) 100%);
     --foreground: #ededed;
   }
 }
@@ -19,6 +19,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, "Poppins", sans-serif;
 }
+
 
 .nav-ul {
   display: flex;
@@ -31,7 +32,7 @@ body {
 }
 
 .nav-li:hover {
-  color: rgb(81, 231, 196);
+  color: '#008080';
 }
 
 li::marker {

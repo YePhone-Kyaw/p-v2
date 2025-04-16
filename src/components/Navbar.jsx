@@ -4,6 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { navLinks } from "../app/constants";
 import { firaCode } from "@/fonts/fonts";
 import { Link } from "react-scroll";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
 
@@ -17,7 +19,11 @@ const Navbar = () => {
     setIsOpen(false);
   }
 
-  // const nodeRef = useRef();
+  const container = useRef();
+  
+  useGSAP(() => {
+    gsap.from('#nav-links', {y: -30, opacity: 0, stagger: 0.3})
+  }, {scope: container})
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,11 +51,11 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div className={`${firaCode.className} hidden md:flex items-center space-x-1`}>
+          <div  ref={container} className={`${firaCode.className} hidden md:flex items-center space-x-1`}>
             {/* Desktop menu */}
-            <ul className="flex space-x-4">
+            <ul className=" flex space-x-4">
               {navLinks.map((item) => (
-                <li key={item.id}>
+                <li id="nav-links" key={item.id}>
                   <Link
                     to={item.href.replace('#', '')}
                     smooth={true}
