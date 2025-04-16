@@ -9,15 +9,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: radial-gradient(circle,rgba(9, 0, 41, 1) 26%, rgba(8, 8, 117, 1) 68%, rgba(12, 27, 28, 1) 100%);
+    --background: radial-gradient(circle,rgba(9, 0, 41, 1) 26%, rgba(8, 17, 77, 1) 73%, rgba(12, 27, 28, 1) 100%);
     --foreground: #ededed;
   }
 }
 
-body {
+html, body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 
