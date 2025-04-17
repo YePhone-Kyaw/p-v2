@@ -1,40 +1,55 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Float, useGLTF } from '@react-three/drei'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { useThree } from '@react-three/fiber';
 
 export function ReactLogo(props) {
   const { nodes, materials } = useGLTF('/models/react_logo.glb');
   const targetRef = useRef();
-  const { viewport } = useThree();
+  const [position, setPosition] = useState([15, 8, 5]);
+  const [scale, setScale] = useState(0.008);
 
-  const getPosition = () => {
-    if (viewport.width < 5) {
-      return [8,8,5];
-    } else if (viewport.width < 14) {
-      return [14, 8, 5];
-    } else {
-      return [18,8,5]
-    }
-  }
+  useEffect(() => {
+    const updateDimensions = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setPosition([5, 8, 5]);
+        setScale(0.004);
+      } else if (width < 768) {
+        setPosition([6, 8, 5]);
+        setScale(0.004);
+      } else if (width < 1024) {
+        setPosition([8, 8, 5]);
+        setScale(0.005)
+      }  else if (width < 1280) {
+        setPosition([12, 8, 5]);
+        setScale(0.006)
+      } else {
+        setPosition([15, 8, 5]);
+        setScale(0.006);
+      }
+    };
+    window.addEventListener('resize', updateDimensions);
+    updateDimensions();
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
 
   useEffect(() => {
     if (targetRef.current) {
-      const [x,y,z] = getPosition();
-      targetRef.current.position.set(x,y,z);
+      targetRef.current.position.set(...position);
+      targetRef.current.scale.set(scale, scale, scale);    
     }
-  }, [viewport.width])
+  }, [position, scale]);
 
   useGSAP(() => {
     if (targetRef.current)  {
       gsap.from(targetRef.current.position, {duration: 1, repeat: -1, yoyo: true, ease: 'bounce'})
     }
-  }, [])
+  }, []);
 
   return (
     <Float floatIntensity={1}>
-      <group {...props} ref={targetRef} dispose={null} scale={0.008}>
+      <group {...props} ref={targetRef} dispose={null}>
         <mesh
           castShadow
           receiveShadow

@@ -12,6 +12,7 @@ import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { ReactLogo } from "@/components/3d-logos/ReactLogo";
 import CanvasLoader from "@/components/CanvasLoader";
 import { PythonLogo } from "@/components/3d-logos/PythonLogo";
+import { JavaLogo } from "@/components/3d-logos/JavaLogo";
 
 const Hero = () => {
   const container = useRef();
@@ -52,7 +53,7 @@ const Hero = () => {
                 sequence={[
                   "I build Web Applications",
                   50,
-                  "I build Mobile Application",
+                  "I build Mobile Applications",
                   50,
                 ]}
                 speed={30}
@@ -62,7 +63,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* <h5 className="">Software Developer</h5> */}
           <p id="hero" className={`${poppins.className} md:text-lg`}>
             I'm a junior software developer based in Calgary, Alberta, Canada.
             I'm passionate about coding and problem-solving. Additionally, I'm
@@ -94,7 +94,7 @@ const Hero = () => {
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
             <ambientLight intensity={0.3} />
-            <directionalLight position={[0, 2, 15]} intensity={1} />
+            <directionalLight position={[-3, 2, 15]} intensity={1} />
             <spotLight
               position={[10, 15, 10]}
               angle={0.3}
@@ -104,6 +104,7 @@ const Hero = () => {
             <group>
               <ReactLogo />
               <PythonLogo />
+              <JavaLogo />
             </group>
           </Suspense>
         </Canvas>
