@@ -20,10 +20,10 @@ export function ReactLogo(props) {
         setScale(0.003);
       } else if (width < 1024) {
         setPosition([6, 8, 5]);
-        setScale(0.03)
+        setScale(0.003)
       }  else if (width < 1280) {
         setPosition([10, 8, 5]);
-        setScale(0.03);
+        setScale(0.003);
       } else if (width < 1440) {
         setPosition([13, 8, 5]);
         setScale(0.004);

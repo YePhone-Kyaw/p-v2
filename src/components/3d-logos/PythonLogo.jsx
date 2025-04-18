@@ -13,20 +13,20 @@ export function PythonLogo(props) {
       const updateDimensions = () => {
         const width = window.innerWidth;
         if (width < 640) {
-          setPosition([-11, -10, 0]);
-          setScale(0.03);
+          setPosition([-8, -10, 0]);
+          setScale(0.003);
         } else if (width < 768) {
-          setPosition([-12, -10, 0]);
-          setScale(0.03);
+          setPosition([-10, -10, 0]);
+          setScale(0.003);
         } else if (width < 1024) {
           setPosition([-13, -10, 0]);
-          setScale(0.03)
+          setScale(0.003)
         } else if (width < 1280) {
           setPosition([-14, -10, 0]);
-          setScale(0.03)
+          setScale(0.003)
         } else if (width < 1440) {
           setPosition([-18, -10, 0]);
-          setScale(0.03)
+          setScale(0.004)
         } else {
           setPosition([-21, -10, 0]);
           setScale(0.005);
