@@ -5,28 +5,31 @@ import gsap from 'gsap';
 
 export function PythonLogo(props) {
   const scene = useGLTF('/models/python.glb');
-  const targetRef = useRef();
-  const [position, setPosition] = useState([-21, -9, 0]);
+  const pythonRef = useRef();
+  const [position, setPosition] = useState([-21, -10, 0]);
     const [scale, setScale] = useState(0.008);
   
     useEffect(() => {
       const updateDimensions = () => {
         const width = window.innerWidth;
         if (width < 640) {
-          setPosition([-6, -9, 0]);
-          setScale(0.004);
+          setPosition([-11, -10, 0]);
+          setScale(0.006);
         } else if (width < 768) {
-          setPosition([-8, -9, 0]);
-          setScale(0.004);
+          setPosition([-12, -10, 0]);
+          setScale(0.006);
         } else if (width < 1024) {
-          setPosition([-10, -9, 0]);
-          setScale(0.005)
-        }  else if (width < 1280) {
-          setPosition([-15, -9, 0]);
+          setPosition([-13, -10, 0]);
+          setScale(0.006)
+        } else if (width < 1280) {
+          setPosition([-14, -10, 0]);
+          setScale(0.006)
+        } else if (width < 1440) {
+          setPosition([-18, -10, 0]);
           setScale(0.006)
         } else {
-          setPosition([-21, -9, 0]);
-          setScale(0.006);
+          setPosition([-21, -10, 0]);
+          setScale(0.008);
         }
       };
       window.addEventListener('resize', updateDimensions);
@@ -35,20 +38,20 @@ export function PythonLogo(props) {
     }, []);
   
     useEffect(() => {
-      if (targetRef.current) {
-        targetRef.current.position.set(...position);
-        targetRef.current.scale.set(scale, scale, scale);    
+      if (pythonRef.current) {
+        pythonRef.current.position.set(...position);
+        pythonRef.current.scale.set(scale, scale, scale);    
       }
     }, [position, scale]);
 
   useGSAP(() => {
-    if (targetRef.current) {
-      gsap.to(targetRef.current.position, {duration: 1, repeat: -1, yoyo: true})
+    if (pythonRef.current) {
+      gsap.to(pythonRef.current.position, {duration: 1, repeat: -1, yoyo: true})
     }
   })
   return (
     <Float floatIntensity={1}>
-      <group {...props} ref={targetRef} dispose={null} scale={0.005}>
+      <group {...props} ref={pythonRef} dispose={null} scale={0.005}>
         <mesh
           castShadow
           receiveShadow

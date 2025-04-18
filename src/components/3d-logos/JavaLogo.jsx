@@ -4,47 +4,42 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 export function JavaLogo(props) {
-    const { nodes, materials, animations } = useGLTF('/models/java.glb')
-    const targetRef = useRef();
-  const { actions } = useAnimations(animations, targetRef);
-  const [position, setPosition] = useState([1, 8, 5])
-  const [scale, setScale] = useState(0.008)
+    const { nodes, materials, animations } = useGLTF('/models/java.glb');
+    const javaRef = useRef();
+  const { actions } = useAnimations(animations, javaRef);
+  const [position, setPosition] = useState([-14, 7, 3])
 
   useEffect(() => {
-    const updateDimensions = () => {
+    const updatePosition = () => {
       const width = window.innerWidth
       if (width < 640) {
-        setPosition([5, 8, 5])
-        setScale(0.004)
+        setPosition([-8, 7, 3])
       } else if (width < 768) {
-        setPosition([6, 8, 5])
-        setScale(0.004)
+        setPosition([-9, 7, 3])
       } else if (width < 1024) {
-        setPosition([8, 8, 5])
-        setScale(0.005)
+        setPosition([-10, 7, 3])
       } else if (width < 1280) {
-        setPosition([12, 8, 5])
-        setScale(0.006)
+        setPosition([-12, 7, 3])
+      } else if (width < 1440) {
+        setPosition([-12, 7, 3])
       } else {
-        setPosition([-15, 6, 5])
-        setScale(0.006)
+        setPosition([-14, 7, 3])
       }
     }
-    window.addEventListener('resize', updateDimensions)
-    updateDimensions();
-    return () => window.removeEventListener('resize', updateDimensions)
-  }, [])
+    window.addEventListener('resize', updatePosition)
+    updatePosition();
+    return () => window.removeEventListener('resize', updatePosition)
+  }, []);
 
-//   useEffect(() => {
-//     if (targetRef.current) {
-//       targetRef.current.position.set(...position)
-//       targetRef.current.scale.set(scale, scale, scale)
-//     }
-//   }, [position, scale])
+  useEffect(() => {
+    if (javaRef.current) {
+      javaRef.current.position.set(...position)
+    }
+  }, [position])
 
 useGSAP(() => {
-    if (targetRef.current) {
-      gsap.from(targetRef.current.position, {
+    if (javaRef.current) {
+      gsap.from(javaRef.current.position, {
         duration: 1.5,
         repeat: -1,
         yoyo: true,
@@ -54,8 +49,7 @@ useGSAP(() => {
   }, [])
   return (
     <Float floatIntensity={1}>
-        <group position={position}>
-        <group ref={targetRef} {...props} dispose={null}>
+        <group ref={javaRef} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="Root">
@@ -122,7 +116,6 @@ useGSAP(() => {
         </group>
       </group>
     </group>
-        </group>
 
     </Float>
   )

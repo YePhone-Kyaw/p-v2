@@ -13,6 +13,8 @@ import { ReactLogo } from "@/components/3d-logos/ReactLogo";
 import CanvasLoader from "@/components/CanvasLoader";
 import { PythonLogo } from "@/components/3d-logos/PythonLogo";
 import { JavaLogo } from "@/components/3d-logos/JavaLogo";
+import { Computer } from "@/components/3d-logos/Computer";
+import { NodeJsLogo } from "@/components/3d-logos/NodeJsLogo";
 
 const Hero = () => {
   const container = useRef();
@@ -92,9 +94,10 @@ const Hero = () => {
       <div className="w-full h-full absolute inset-0 pointer-events-none">
         <Canvas>
           <Suspense fallback={<CanvasLoader />}>
-            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-            <ambientLight intensity={0.3} />
-            <directionalLight position={[-3, 2, 15]} intensity={1} />
+            <PerspectiveCamera makeDefault position={[-3, 0, 30]} />
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[-3, 2, 20]} intensity={1} />
+            <hemisphereLight intensity={1} />
             <spotLight
               position={[10, 15, 10]}
               angle={0.3}
@@ -105,6 +108,8 @@ const Hero = () => {
               <ReactLogo />
               <PythonLogo />
               <JavaLogo />
+              <Computer />
+              <NodeJsLogo />
             </group>
           </Suspense>
         </Canvas>
