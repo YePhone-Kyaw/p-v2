@@ -14,22 +14,22 @@ export function PythonLogo(props) {
         const width = window.innerWidth;
         if (width < 640) {
           setPosition([-11, -10, 0]);
-          setScale(0.006);
+          setScale(0.03);
         } else if (width < 768) {
           setPosition([-12, -10, 0]);
-          setScale(0.006);
+          setScale(0.03);
         } else if (width < 1024) {
           setPosition([-13, -10, 0]);
-          setScale(0.006)
+          setScale(0.03)
         } else if (width < 1280) {
           setPosition([-14, -10, 0]);
-          setScale(0.006)
+          setScale(0.03)
         } else if (width < 1440) {
           setPosition([-18, -10, 0]);
-          setScale(0.006)
+          setScale(0.03)
         } else {
           setPosition([-21, -10, 0]);
-          setScale(0.008);
+          setScale(0.005);
         }
       };
       window.addEventListener('resize', updateDimensions);
@@ -44,11 +44,11 @@ export function PythonLogo(props) {
       }
     }, [position, scale]);
 
-  useGSAP(() => {
-    if (pythonRef.current) {
-      gsap.to(pythonRef.current.position, {duration: 1, repeat: -1, yoyo: true})
-    }
-  })
+  // useGSAP(() => {
+  //   if (pythonRef.current) {
+  //     gsap.to(pythonRef.current.position, {duration: 1, repeat: -1, yoyo: true})
+  //   }
+  // })
   return (
     <Float floatIntensity={1}>
       <group {...props} ref={pythonRef} dispose={null} scale={0.005}>

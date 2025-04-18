@@ -15,6 +15,7 @@ import { PythonLogo } from "@/components/3d-logos/PythonLogo";
 import { JavaLogo } from "@/components/3d-logos/JavaLogo";
 import { Computer } from "@/components/3d-logos/Computer";
 import { NodeJsLogo } from "@/components/3d-logos/NodeJsLogo";
+import { DockerLogo } from "@/components/3d-logos/DockerLogo";
 
 const Hero = () => {
   const container = useRef();
@@ -54,11 +55,9 @@ const Hero = () => {
                 preRenderFirstString={true}
                 sequence={[
                   "I build Web Applications",
-                  50,
                   "I build Mobile Applications",
-                  50,
                 ]}
-                speed={30}
+                speed={2}
                 className="text-animation text-xl md:text-2xl font-bold text-teal-400"
                 repeat={Infinity}
               />
@@ -108,8 +107,9 @@ const Hero = () => {
               <ReactLogo />
               <PythonLogo />
               <JavaLogo />
-              <Computer />
+              {/* <Computer /> */}
               <NodeJsLogo />
+              <DockerLogo />
             </group>
           </Suspense>
         </Canvas>
