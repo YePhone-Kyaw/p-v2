@@ -63,8 +63,7 @@ const About = () => {
               </a>
               . I'm passionate creating websites, softwares and mobile
               applications. Additionally, I'm also interested in OOP principles
-              and problem-solving skills to develop efficient applications. My
-              journey in Software Development has started in 2021.
+              and problem-solving skills to develop efficient applications.
             </p>
 
             <p>
@@ -80,7 +79,7 @@ const About = () => {
           <img
             src="/me.jpg"
             alt="profile"
-            className="photo md:ml-10 mt-0 lg:ml-20 h-64 w-56 rounded-lg hidden md:block"
+            className="photo md:ml-10 mt-0 lg:ml-20 h-64 w-56 rounded-2xl hidden md:block "
           />
         </div>
       </div>

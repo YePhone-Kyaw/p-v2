@@ -20,9 +20,27 @@ const Navbar = () => {
   }
 
   const container = useRef();
+  const menuRef = useRef(null);
   
   useGSAP(() => {
-    gsap.from('#nav-links', {y: -30, opacity: 0, stagger: 0.3})
+    if (isOpen) {
+      gsap.fromTo(
+        menuRef.current,
+        { x: "100%", opacity: 0 },
+        { x: "0%", opacity: 1, duration: 0.5, ease: "power3.out" }
+      );
+    } else {
+      gsap.to(menuRef.current, {
+        x: "100%",
+        opacity: 0,
+        duration: 0.5,
+        ease: "power3.in",
+      });
+    }
+  }, [isOpen]);
+
+  useGSAP(() => {
+      gsap.fromTo('mobile', {x: 0, y: 0,  opacity: 0}, {x: 300, y:300, opacity: 1, duration: 0.5, ease: 'power2.inOut', stagger: 0.3})
   }, {scope: container})
 
   useEffect(() => {
@@ -93,48 +111,39 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50">
+      {/* Mobile menu */} 
+      {/* {isOpen && ( */}
+        <div ref={menuRef} className="fixed inset-0 z-50 bg-black bg-opacity-75 backdrop-blur-md">
           <div
-            className={`
-            fixed inset-y-0 right-0 w-full md:hidden 
-            transition-transform duration-300 ease-in-out 
-            ${isOpen ? "translate-x-0" : "translate-x-full"}
-          `}
+            className={`fixed inset-y-0 right-0 w-2/3 md:hidden bg-blue-950 shadow-xl  ${
+              isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
           >
-            <div
-              className="absolute inset-y-0 left-0 w-1/2 bg-black bg-opacity-50 backdrop-blur-sm"
+            <button
+              className="absolute top-4 right-4 z-50"
               onClick={toggleMenu}
-            ></div>
-            <div className="absolute inset-y-0 right-0 w-1/2 bg-blue-950 shadow-xl overflow-y-auto">
-              <button
-                className="absolute top-4 right-4 z-50"
-                onClick={toggleMenu}
-              >
-                <img src="/close.svg" alt="close" className="w-6 h-6" />
-              </button>
-              <ul className="pt-16 pb-3 flex flex-col">
-                {navLinks.map((item) => (
-                  <li key={item.id}>
-                    <Link
-                    to={item.href.replace('#', '')}
+            >
+              <img src="/close.svg" alt="close" className="w-6 h-6" />
+            </button>
+            <ul className="pt-16 pb-6 flex flex-col items-center space-y-6">
+              {navLinks.map((item) => (
+                <li key={item.id}>
+                  <Link
+                    to={item.href.replace("#", "")}
                     smooth={true}
                     duration={300}
                     offset={0}
-                      className="block py-2 px-4 text-sm text-neutral-300 hover:text-teal-400 transition duration-300"
-                      onClick={handleLinkClick}
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                    className="text-lg font-medium text-neutral-300 hover:text-teal-400 transition duration-300"
+                    onClick={handleLinkClick}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      )}
+      {/* )} */}
     </>
     
   );
