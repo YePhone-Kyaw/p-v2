@@ -20,28 +20,15 @@ const Navbar = () => {
   }
 
   const container = useRef();
-  const menuRef = useRef(null);
   
   useGSAP(() => {
-    if (isOpen) {
-      gsap.fromTo(
-        menuRef.current,
-        { x: "100%", opacity: 0 },
-        { x: "0%", opacity: 1, duration: 0.5, ease: "power3.out" }
-      );
-    } else {
-      gsap.to(menuRef.current, {
-        x: "100%",
-        opacity: 0,
-        duration: 0.5,
-        ease: "power3.in",
-      });
-    }
-  }, [isOpen]);
-
-  useGSAP(() => {
-      gsap.fromTo('mobile', {x: 0, y: 0,  opacity: 0}, {x: 300, y:300, opacity: 1, duration: 0.5, ease: 'power2.inOut', stagger: 0.3})
+    gsap.timeline().from('#logo', {y: -30, opacity: 0})
+    .from('#nav-links', {y: -30, opacity: 0, stagger: 0.3})
   }, {scope: container})
+
+  // useGSAP(() => {
+  //     gsap.from('#mobile-nav', {})
+  // }, {scope: container})
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,11 +44,11 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className={`fixed top-0 left-0 right-0 transition-transform duration-300 z-50 ${visible ? 'translate-y-0' : '-translate-y-full'}  bg-opacity-50 shadow-md backdrop-filter backdrop-blur-md `}>
+    <nav ref={container} className={`fixed top-0 left-0 right-0 transition-transform duration-300 z-50 ${visible ? 'translate-y-0' : '-translate-y-full'}  bg-opacity-50 shadow-md backdrop-filter backdrop-blur-md `}>
       <div className="max-w-8xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-7">
-            <div>
+            <div id='logo'>
               <Link to="top" smooth={true} duration={300} offset={0} className="flex items-center py-4 px-2 cursor-pointer">
                 <span className="font-semibold text-neutral-300 text-lg">
                   YPK
@@ -69,7 +56,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div  ref={container} className={`${firaCode.className} hidden md:flex items-center space-x-1`}>
+          <div className={`${firaCode.className} hidden md:flex items-center space-x-1`}>
             {/* Desktop menu */}
             <ul className=" flex space-x-4">
               {navLinks.map((item) => (
@@ -112,10 +99,10 @@ const Navbar = () => {
       </div>
     </nav>
       {/* Mobile menu */} 
-      {/* {isOpen && ( */}
-        <div ref={menuRef} className="fixed inset-0 z-50 bg-black bg-opacity-75 backdrop-blur-md">
+      {isOpen && (
+        <div ref={container} id="mobile-nav" className="fixed inset-0 z-50 bg-black bg-opacity-75 backdrop-blur-md">
           <div
-            className={`fixed inset-y-0 right-0 w-2/3 md:hidden bg-blue-950 shadow-xl  ${
+            id='mobile-nav' className={`fixed inset-y-0 right-0 w-2/3 md:hidden bg-blue-950 shadow-xl  ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -127,7 +114,7 @@ const Navbar = () => {
             </button>
             <ul className="pt-16 pb-6 flex flex-col items-center space-y-6">
               {navLinks.map((item) => (
-                <li key={item.id}>
+                <li id="mobile-links" key={item.id}>
                   <Link
                     to={item.href.replace("#", "")}
                     smooth={true}
@@ -143,7 +130,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      {/* )} */}
+      )}
     </>
     
   );

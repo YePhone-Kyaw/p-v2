@@ -24,7 +24,7 @@ const Hero = () => {
     () => {
       gsap
         .timeline()
-        .from("#intro", { y: -50, opacity: 0, ease: "back", delay: 1.5 })
+        .from("#intro", { y: -50, opacity: 0, ease: "back", delay: 2 })
         .from("#name", { y: -50, opacity: 0, ease: "back" })
         .from("#text", { y: -50, opacity: 0, ease: "back" })
         .from("#hero", { y: -50, opacity: 0, ease: "back" })
@@ -92,7 +92,8 @@ const Hero = () => {
       </div>
       <div className="w-full h-full absolute inset-0 pointer-events-none">
         <Canvas>
-          <Suspense fallback={<CanvasLoader />}>
+          {/* <Suspense fallback={<CanvasLoader />}> */}
+              <Suspense>
             <PerspectiveCamera makeDefault position={[-3, 0, 30]} />
             <ambientLight intensity={0.5} />
             <directionalLight position={[-3, 2, 20]} intensity={1} />

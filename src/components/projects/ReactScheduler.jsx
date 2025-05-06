@@ -51,20 +51,31 @@ const ReactScheduler = ({ onDemoClick }) => {
             </ul>
           </div>
 
-          <div className={`${poppins.className} flex flex-col bg-gray-500/10 p-4 rounded-md max-w-[500px] mt-5`}>
-            <h4 className="text-teal-300">Technical Implementation:</h4>
-            <div className="text-sm flex gap-32 md:gap-40 mt-3">
-              <ul className="list-disc marker:text-blue-500 pl-5">
-                <li>Vite + React</li>
-                <li>Firebase Auth</li>
-                <li>Firebase Storage</li>
-              </ul>
-              <ul className="list-disc marker:text-green-500 pl-5">
-                <li>Docker</li>
-                <li>React Beautiful DnD</li>
-                <li>Day.js</li>
-              </ul>
-            </div>
+                      <div id='tech' className={`${poppins.className} hidden md:block`}>
+                        <ul className="flex md:flex gap-3 text-teal-400 md:text-xs lg:text-sm">
+                          <li className="bg-gray-500/20 p-2 rounded-md">React Native</li>
+                          <li className="bg-gray-500/20 p-2 rounded-md">Expo</li>
+                          <li className="bg-gray-500/20 p-2 rounded-md">Expo Router</li>
+                          <li className="bg-gray-500/20 p-2 rounded-md">TypeScript</li>
+                          <li className="bg-gray-500/20 p-2 rounded-md">React Navigation</li>
+                          <li className="bg-gray-500/20 p-2 rounded-md">Axios</li>
+                        </ul>
+                      </div>
+                      <div>
+                      <div className={`${poppins.className} flex gap-10 md:hidden`}>
+                              <ul className="flex flex-col gap-2 text-teal-400 text-xs">
+                                <li className="bg-gray-500/20 p-2 rounded-md">React Native</li>
+                                <li className="bg-gray-500/20 p-2 rounded-md">TypeScript</li>
+                              </ul>
+                              <ul className="flex flex-col gap-2 text-teal-400 text-xs">
+                                <li className="bg-gray-500/20 p-2 rounded-md">Expo</li>
+                                <li className="bg-gray-500/20 p-2 rounded-md">Expo Router</li>
+                              </ul>
+                              <ul className="flex flex-col gap-2 text-teal-400 text-xs">
+                                <li className="bg-gray-500/20 p-2 rounded-md">React Navigation</li>
+                                <li className="bg-gray-500/20 p-2 rounded-md">Axios</li>
+                              </ul>
+                            </div>
           </div>
         </div>
       </div>
