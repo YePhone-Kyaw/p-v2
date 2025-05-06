@@ -30,12 +30,13 @@ const ReactScheduler = ({ onDemoClick }) => {
             </button>
           </div>
         </div>
+        <div className="flex flex-col gap-3">
         <div className=" bg-gray-500/20 p-6 rounded-lg">
           <p className={`${poppins.className} max-w-full md:max-w-[600px] lg:max-w-[800px] mt-5 md:mt-0`}>
             As a key contributor to the PowerShift React Scheduler capstone project, I helped develop an enterprise-grade workforce management solution for restaurant operations. This full-stack application features a modern Vite + React frontend paired with Firebase authentication and cloud storage, containerized with Docker for deployment flexibility. The system implements a dual-role architecture (employer/employee) with granular access controls, enabling managers to:
           </p>
 
-          <div className={`${poppins.className} bg-gray-500/10 p-4 rounded-md mt-5`}>
+          <div className={`${poppins.className} p-4 mt-5`}>
             <h4 className="text-teal-300">Core Functionalities:</h4>
             <ul className="list-disc marker:text-teal-400 pl-5 mt-2 space-y-2">
               <li>Employee lifecycle management (onboarding, role updates, and offboarding)</li>
@@ -50,34 +51,35 @@ const ReactScheduler = ({ onDemoClick }) => {
               <li>Real-time shift notifications and conflict resolution</li>
             </ul>
           </div>
-
-                      <div id='tech' className={`${poppins.className} hidden md:block`}>
-                        <ul className="flex md:flex gap-3 text-teal-400 md:text-xs lg:text-sm">
-                          <li className="bg-gray-500/20 p-2 rounded-md">React Native</li>
-                          <li className="bg-gray-500/20 p-2 rounded-md">Expo</li>
-                          <li className="bg-gray-500/20 p-2 rounded-md">Expo Router</li>
-                          <li className="bg-gray-500/20 p-2 rounded-md">TypeScript</li>
-                          <li className="bg-gray-500/20 p-2 rounded-md">React Navigation</li>
-                          <li className="bg-gray-500/20 p-2 rounded-md">Axios</li>
-                        </ul>
-                      </div>
-                      <div>
-                      <div className={`${poppins.className} flex gap-10 md:hidden`}>
-                              <ul className="flex flex-col gap-2 text-teal-400 text-xs">
-                                <li className="bg-gray-500/20 p-2 rounded-md">React Native</li>
-                                <li className="bg-gray-500/20 p-2 rounded-md">TypeScript</li>
-                              </ul>
-                              <ul className="flex flex-col gap-2 text-teal-400 text-xs">
-                                <li className="bg-gray-500/20 p-2 rounded-md">Expo</li>
-                                <li className="bg-gray-500/20 p-2 rounded-md">Expo Router</li>
-                              </ul>
-                              <ul className="flex flex-col gap-2 text-teal-400 text-xs">
-                                <li className="bg-gray-500/20 p-2 rounded-md">React Navigation</li>
-                                <li className="bg-gray-500/20 p-2 rounded-md">Axios</li>
-                              </ul>
-                            </div>
-          </div>
         </div>
+        <div id='tech' className={`${poppins.className} hidden md:block`}>
+                      <ul className="flex md:flex gap-3 text-teal-400 md:text-xs lg:text-sm">
+                        <li className="bg-gray-500/20 p-2 rounded-md">Vite + React</li>
+                        <li className="bg-gray-500/20 p-2 rounded-md">React Beautiful DnD</li>
+                        <li className="bg-gray-500/20 p-2 rounded-md">Firebase Auth</li>
+                        <li className="bg-gray-500/20 p-2 rounded-md">Firebase Storage</li>
+                        <li className="bg-gray-500/20 p-2 rounded-md">Docker</li>
+                        <li className="bg-gray-500/20 p-2 rounded-md">Day.js</li>
+                      </ul>
+                    </div>
+                    <div>
+                    <div className={`${poppins.className} flex gap-10 md:hidden`}>
+                            <ul className="flex flex-col gap-2 text-teal-400 text-xs">
+                              <li className="bg-gray-500/20 p-2 rounded-md">Vite + React</li>
+                              <li className="bg-gray-500/20 p-2 rounded-md">React Beautiful DnD</li>
+                            </ul>
+                            <ul className="flex flex-col gap-2 text-teal-400 text-xs">
+                              <li className="bg-gray-500/20 p-2 rounded-md">Firebase Auth</li>
+                              <li className="bg-gray-500/20 p-2 rounded-md">Firebase Storage</li>
+                            </ul>
+                            <ul className="flex flex-col gap-2 text-teal-400 text-xs">
+                              <li className="bg-gray-500/20 p-2 rounded-md">Docker</li>
+                              <li className="bg-gray-500/20 p-2 rounded-md">Day.js</li>
+                            </ul>
+                          </div>
+                    </div>
+        </div>
+        
       </div>
     </div>
   );
