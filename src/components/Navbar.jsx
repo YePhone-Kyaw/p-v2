@@ -26,10 +26,6 @@ const Navbar = () => {
     .from('#nav-links', {y: -30, opacity: 0, stagger: 0.3})
   }, {scope: container})
 
-  // useGSAP(() => {
-  //     gsap.from('#mobile-nav', {})
-  // }, {scope: container})
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;

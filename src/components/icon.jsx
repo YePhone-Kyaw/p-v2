@@ -6,6 +6,7 @@ const { default: IconLinkedin } = require("./icons/linkedin");
 
 import PropTypes from "prop-types";
 import IconDemoVideo from "./icons/demo";
+import IconHandUp from "./icons/hand-up";
 
 const Icon = ({name, ...props}) => {
     switch (name) {
@@ -21,6 +22,8 @@ const Icon = ({name, ...props}) => {
             return <IconDownload {...props} />;
         case 'Demo':
             return <IconDemoVideo {...props} />;
+        case 'Hand-up':
+            return <IconHandUp {...props} />;
         default:
             return null;
     }

@@ -1,5 +1,6 @@
 import { firaCode, geistMono, geistSans, poppins } from "@/fonts/fonts";
 import "./globals.css";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
   title: "Ye Phone Kyaw ",
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${firaCode.variable}`}>
       <body className="antialiased">
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

@@ -10,15 +10,16 @@ export const navLinks = [
         href: "#projects",
     },
     {
-        id: 3,
-        name: "Skills",
-        href: "#skills",
-    },
-    {
-        id:4, 
+        id:3, 
         name: "Awards",
         href: '#awards'
     },
+    {
+        id: 4,
+        name: "Skills",
+        href: "#skills",
+    },
+    
     {
         id: 5,
         name: "Contact",

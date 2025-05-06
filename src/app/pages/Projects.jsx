@@ -55,7 +55,7 @@ const Experience = () => {
   >
     <div ref={container} className="w-full max-w-5xl">
       <div className={`title ${firaCode.className} flex items-center gap-5 mb-10`}>
-        <h1 className="flex text-2xl text-teal-300">Projects</h1>
+        <h1 className="flex text-2xl text-teal-300">Experience</h1>
         <span className="bg-teal-300 w-[100px] h-[1px]"></span>
       </div>
       <div className="flex flex-col gap-20 ">
