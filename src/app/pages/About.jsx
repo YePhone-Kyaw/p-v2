@@ -56,7 +56,7 @@ const About = () => {
             className={`box ${poppins.className} text-md flex flex-col gap-5 lg:max-w-[700px] md:max-w-[600px] max-w-full`}
           >
             <p>
-              Hello! My name is Ye Phone (George) and I recently graduated from
+              Hello! My name is Ye Phone (Zayden) and I recently graduated from
               Southern Alberta Institute of Technology{" "}
               <a href="https://www.sait.ca/" className="text-teal-300">
                 SAIT
