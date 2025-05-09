@@ -2,8 +2,6 @@ import React from 'react';
 
 const IconJavaScript = ({id, className}) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    role="img"
     viewBox="0 0 128 128"
     fill="none"
     id={id}

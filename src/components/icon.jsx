@@ -12,6 +12,11 @@ import IconCss from "./icons/css";
 import IconJavaScript from "./icons/javascript";
 import IconJava from "./icons/java";
 import IconTypeScript from "./icons/typescript";
+import IconPython from "./icons/python";
+import IconThreeJs from "./icons/threejs";
+import IconCSharp from "./icons/csharp";
+import IconGH from "./icons/gh";
+import IconPostman from "./icons/postman";
 
 const Icon = ({ name, ...props }) => {
   switch (name) {
@@ -29,17 +34,6 @@ const Icon = ({ name, ...props }) => {
       return <IconDemoVideo {...props} />;
     case "Hand-up":
       return <IconHandUp {...props} />;
-    case "Html":
-      return <IconHtml {...props} />;
-    case "Css":
-      return <IconCss {...props} />;
-    case "JavaScript":
-      return <IconJavaScript {...props} />;
-    case "TypeScript":
-      return <IconTypeScript />;
-    case "Java":
-      return <IconJava {...props} />;
-
     default:
       return null;
   }
