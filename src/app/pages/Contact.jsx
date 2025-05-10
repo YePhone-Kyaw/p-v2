@@ -13,9 +13,6 @@ const Contact = () => {
 
   const [status, setStatus] = useState(null);
 
-  // const handleChange = (e) => {
-  //   setFormData(prev => ({...prev, [e.target.name]: e.target.value}));
-  // }
 
    const handleSetName = (e) => setName(e.target.value);
    const handleSetEmail = (e) => setEmail(e.target.value);
