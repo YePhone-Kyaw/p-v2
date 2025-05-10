@@ -41,7 +41,7 @@ const Hero = () => {
       <div ref={container} className="w-full max-w-5xl relative z-10">
         <div className="flex flex-col gap-3">
           <h5 id="intro" className="text-sm md:text-lg text-teal-400">
-            Hi, my name is{" "}
+            Hi there, my name is{" "}
           </h5>
           <div className={`${firaCode.className}`}>
             <h1

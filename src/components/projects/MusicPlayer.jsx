@@ -14,7 +14,7 @@ const MusicPlayer = ({ onDemoClick }) => {
         start: 'top center'
       }
     })
-    .from('#title', {opacity: 0, x:300, duration: 2})
+    .from('#title', {opacity: 0, x:300, duration: 1})
     .from('#image', {x: -300, opacity: 0, stagger: 0.2})
     .from('#description', {x:300, opacity: 0})
     .from('#tech', {x: 300, opacity: 0, stagger: 0.3})
