@@ -46,70 +46,11 @@ const Contact = () => {
           Whether you have a question, want to collaborate, or just want to say
           hello, feel free to drop a message!
         </p>
-        <a className="inline-block px-8 py-4 border border-teal-400" href={`mailto: ${email}`}>Drop me a line!</a>
-        {/* <form className="flex flex-col gap-10"> */}
-          {/* <div className="flex items-center justify-between gap-10 w-[600px] mt-20"> */}
-            {/* <input
-              type="text"
-              id="name"
-              name="name"
-              value={name}
-              onChange={handleSetName}
-              className="w-full bg-gray-300/20 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-400 transition cursor-pointer focus:cursor-text"
-              placeholder="Your full name"
-              required
-            />
-
-            <input
-              type="email"
-              id="email"
-              rows='5'
-              value={email}
-              onChange={handleSetEmail}
-              className="w-full bg-gray-300/20 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-400 transition cursor-pointer focus:cursor-text"
-              placeholder="Your email"
-              required
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              id="message"
-              name="message"
-              value={message}
-              onChange={handleSetMessage}
-              className="w-full bg-gray-300/20 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-400 transition cursor-pointer focus:cursor-text"
-              placeholder="Your Message"
-              required
-            />
-          </div> */}
-          {/* <div className="relative group max-w-[150px]"> */}
-  {/* Teal border fill on hover */}
-  {/* <div className="
-
-  "></div>
-  
-  <button
-    type="submit"
-    className="
-    inline-block 
-    px-8 py-4 
-    border border-teal-400 
-    rounded-lg 
-    font-mono text-sm 
-    text-teal-400 
-    hover:bg-teal-400/10 
-    hover:text-teal-300 
-    transition-all 
-    duration-300
-  "
-    style={{ color: '#7593af' }}
-  >
-    Send Message
-  </button>
-</div> */}
-
-        {/* </form> */}
+        <a className="inline-block px-8 py-4 mt-10 border border-teal-400 rounded-lg hover:bg-teal-400/10
+        hover:text-teal-300 
+        transition-all 
+        duration-300 " href={`mailto: ${email}`}>Drop me a line!</a>
+       
       </div>
     </section>
   );
