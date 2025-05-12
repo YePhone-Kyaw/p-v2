@@ -100,7 +100,7 @@ const Skills = () => {
     <section id='skills'
       className="flex flex-col min-h-screen w-full items-center justify-center py-10 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
     >
-      <h3 id='header' className={`${firaCode.className} text-3xl text-teal-300 mb-10`}>Skills & Technologies</h3>
+      <h3 id='header' className={`${firaCode.className} text-2xl md:text-3xl text-teal-300 mb-10`}>Skills & Technologies</h3>
 
       <div id='border' className='border-2 w-full max-w-5xl items-center justify-around border-teal-300/20 p-10 rounded-3xl '>
         <div
