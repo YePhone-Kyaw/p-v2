@@ -34,6 +34,7 @@ const Contact = () => {
     setName("");
     setMessage("");
   };
+  console.log(email);
   return (
     <section
       id="contact"
@@ -50,8 +51,7 @@ const Contact = () => {
         <a className="inline-block px-8 py-4 mt-10 border border-teal-400 rounded-lg hover:bg-teal-400/10
         hover:text-teal-300 
         transition-all 
-        duration-300 " href={`mailto:${email}`}>Drop me a line!</a>
-       
+        duration-300 " href={`mailto:${email}`} style={{color: '#7593af'}}>Drop me a line!</a>
       </div>
     </section>
   );

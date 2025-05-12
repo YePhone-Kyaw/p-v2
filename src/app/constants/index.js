@@ -90,9 +90,7 @@ export const socialMedia = [
     }
 ]
 
-export const email = {
-    email: 'yephonekyaw920@gmail.com',
-}
+export const email = 'yephonekyaw920@gmail.com'
 
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
