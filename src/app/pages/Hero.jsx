@@ -92,8 +92,7 @@ const Hero = () => {
       </div>
       <div className="w-full h-full absolute inset-0 pointer-events-none">
         <Canvas>
-          {/* <Suspense fallback={<CanvasLoader />}> */}
-              <Suspense>
+          <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[-3, 0, 30]} />
             <ambientLight intensity={0.5} />
             <directionalLight position={[-3, 2, 20]} intensity={1} />
