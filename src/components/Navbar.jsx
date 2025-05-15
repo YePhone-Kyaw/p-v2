@@ -53,7 +53,6 @@ const Navbar = () => {
             </div>
           </div>
           <div className={`${firaCode.className} hidden md:flex items-center space-x-1`}>
-            {/* Desktop menu */}
             <ul className=" flex space-x-4">
               {navLinks.map((item) => (
                 <li id="nav-links" key={item.id}>
@@ -94,7 +93,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-      {/* Mobile menu */} 
       {isOpen && (
         <div ref={container} id="mobile-nav" className="fixed inset-0 z-50 bg-black bg-opacity-75 backdrop-blur-md">
           <div
