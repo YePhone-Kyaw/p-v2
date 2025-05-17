@@ -32,7 +32,7 @@ const Experience = () => {
     gsap.from('.title', {
       opacity: 0,
       x: 300,
-      duration: 2,
+      duration: 1,
       scrollTrigger: {
         trigger: '.title',
         start: 'top center',

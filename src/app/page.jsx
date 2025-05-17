@@ -6,6 +6,7 @@ import Hero from "./pages/Hero";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Awards from "./pages/Awards";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Awards />
       <Skills />
       <Contact />
+      <Footer />
     </main>
   );
 }

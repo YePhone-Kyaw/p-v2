@@ -9,13 +9,12 @@ import React, { useRef } from "react";
 
 const Awards = () => {
   const container = useRef();
-  // gsap.registerPlugin(useGSAP, ScrollTrigger)
 
   useGSAP(() => {
     gsap.from('#achievements', {
       opacity: 0,
       x: 300,
-      duration: 2,
+      duration: 1,
       scrollTrigger: {
         trigger: '#achievements',
         start: 'top center',
