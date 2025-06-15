@@ -19,6 +19,7 @@ html, body {
   background: var(--background);
   font-family: Arial, Helvetica, "Poppins", sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 

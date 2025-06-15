@@ -7,16 +7,7 @@ const { default: IconLinkedin } = require("./icons/linkedin");
 import PropTypes from "prop-types";
 import IconDemoVideo from "./icons/demo";
 import IconHandUp from "./icons/hand-up";
-import IconHtml from "./icons/html";
-import IconCss from "./icons/css";
-import IconJavaScript from "./icons/javascript";
-import IconJava from "./icons/java";
-import IconTypeScript from "./icons/typescript";
-import IconPython from "./icons/python";
-import IconThreeJs from "./icons/threejs";
-import IconCSharp from "./icons/csharp";
-import IconGH from "./icons/gh";
-import IconPostman from "./icons/postman";
+import IconCodePen from "./icons/codepen";
 
 const Icon = ({ name, ...props }) => {
   switch (name) {
@@ -28,8 +19,8 @@ const Icon = ({ name, ...props }) => {
       return <IconFacebook {...props} />;
     case "Instagram":
       return <IconInstagram {...props} />;
-    case "Resume":
-      return <IconDownload {...props} />;
+    case "CodePen":
+      return <IconCodePen {...props} />;
     case "Demo":
       return <IconDemoVideo {...props} />;
     case "Hand-up":
