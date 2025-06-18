@@ -8,6 +8,7 @@ import React, { useRef } from "react";
 import { resume } from "../constants";
 import TextCard from "@/components/TextCard";
 import IconWebDevelopment from "@/components/icons/web";
+import IconMobileDevelopment from "@/components/icons/mobile";
 
 const About = () => {
   const container = useRef(null);
@@ -99,24 +100,26 @@ const About = () => {
         <span className="bg-teal-300 w-[100px] h-[1px] "></span>
       </div>
       <div className=" flex">
-        <div className="flex flex-col justify-between md:items-start items-center p-2 w-1/2">
-          <img
-            src="/me.jpg"
-            alt="profile"
-            className="photo h-64 w-56 mb-10 rounded-lg"
-          />
+        <div className="flex flex-col justify-between items-center py-2 px-5 w-1/2">
+          <div className="flex flex-col items-center">
+            <img
+              src="/me.jpg"
+              alt="profile"
+              className="photo h-64 w-56 mb-10 rounded-lg"
+            />
 
-          <div className="flex items-center gap-3 w-full">
-            <Button href="#contact" boxStyle="outline">
-              Get in touch
-            </Button>
-            <Button href={resume} boxStyle="outline">
-              Download CV
-            </Button>
+            <div className="flex items-center gap-3 w-full">
+              <Button href="#contact" boxSize={300} boxStyle="outline">
+                Get in touch
+              </Button>
+              <Button href={resume} boxSize={300} boxStyle="outline">
+                Download CV
+              </Button>
+            </div>
           </div>
 
           <div
-            className={`box ${poppins.className} text-md flex flex-col gap-5 lg:max-w-[700px] md:max-w-[600px] max-w-full`}
+            className={`box ${poppins.className} text-md flex flex-col mt-5 gap-5 lg:max-w-[700px] md:max-w-[600px] max-w-full`}
           >
             <p>
               Hello! My name is Ye Phone (Zayden) and I recently graduated from
@@ -140,7 +143,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="w-1/2 p-2">
+        <div className="w-1/2 p-2 flex flex-col items-center space-y-5">
           <TextCard
             icon={
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
@@ -153,15 +156,17 @@ const About = () => {
             frameworks like React, Vue for frontend and Node.js, Laravel for
             backend
           </TextCard>
-           <TextCard
+          <TextCard
             icon={
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
-                <IconWebDevelopment />
+                <IconMobileDevelopment />
               </span>
             }
             title="Mobile Application Development"
           >
-            Build cross-platform mobile applications using React Native, delivering smooth and consistent user experiences on both iOS and Android
+            Build cross-platform mobile applications using React Native,
+            delivering smooth and consistent user experiences on both iOS and
+            Android
           </TextCard>
         </div>
       </div>
