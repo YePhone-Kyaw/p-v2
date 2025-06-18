@@ -137,7 +137,7 @@ const About = () => {
           </div>
         </div>
         <div>
-          <TextCard title="Web Development">Develop & Build web application with React, Vue</TextCard>
+          <TextCard icon={} title="Web Development">Develop responsive high performance web applications using modern frameworks like React, Vue for frontend and Node.js, Laravel for backend</TextCard>
         </div>
       </div>
     </div>
