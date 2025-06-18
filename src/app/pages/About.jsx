@@ -88,17 +88,15 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-1/2 p-2">
-        <div className="w-full flex flex-col items-center space-y-5">
+        <div className="w-full md:w-1/2 p-2 flex flex-col items-center space-y-5">
           {cards.map((card, i) => (
-            <div className="cards">
-              <TextCard key={i}
+            <div className="cards" key={i}>
+              <TextCard 
               ref={el => (cardsRef.current[i] = el)}
               {...card} />
             </div>
           ))}
         </div>
-        </div>   
       </div>
       </div>
     </section>

@@ -1,38 +1,21 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
-const Button = ({ href, children, boxStyle = "normal", ...props }) => {
-  const className = `text-center rounded-md p-2 cursor-pointer w-full sm:w-[300px] ${
-    boxStyle === "outline"
-      ? "border-2 border-teal-300 bg-transparent text-teal-300"
-      : "bg-teal-300 text-white"
-  }`;
-
-  if (typeof href === "string" && href.startsWith("#")) {
-    return (
-      <ScrollLink
-        to={href.replace("#", "")}
-        smooth={true}
-        duration={300}
-        offset={0}
-        className={className}
-        {...props}
-      >
-        {children}
-      </ScrollLink>
-    );
+const Button = ({ href, children, boxStyle = "normal", className = "", ...props }) => {
+  let baseClass = "w-full text-center rounded-md p-2 cursor-pointer";
+  if (boxStyle === "outline") {
+    baseClass += " border-2 border-teal-300 bg-transparent text-teal-300";
+  } else if (boxStyle === "normal") {
+    baseClass += " bg-teal-300 text-white";
   }
+  // If boxStyle is "none" or "", don't add any extra classes
 
-  if (typeof href === "string" ) {
-    return (
-      <a target="_blank" href={href} className={className} {...props}>
-        {children}
-      </a>
-    );
-  }
-
-  return (
-    <button className={className} {...props}>
+  return typeof href === "string" ? (
+    <a href={href} className={`${baseClass} ${className}`} {...props}>
+      {children}
+    </a>
+  ) : (
+    <button className={`${baseClass} ${className}`} {...props}>
       {children}
     </button>
   );
