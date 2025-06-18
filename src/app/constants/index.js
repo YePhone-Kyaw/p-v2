@@ -112,14 +112,22 @@ export const cards = [
 export const projects = [
   {
     image: "/portfolio.png",
-    title: "Portfolio Website",
-    description: "A modern portfolio built with React and Tailwind CSS.",
-    languages: ["React", "Tailwind CSS", "JavaScript"],
+    title: "My Portfolio",
+    description: "A modern portfolio built with ThreeJs, React and Tailwind CSS.",
+    languages: ["ThreeJS", "React", "Tailwind CSS", "JavaScript"],
     url: "https://p-v1-three.vercel.app/",
     githubUrl: "https://github.com/yourusername/portfolio",
   },
     {
-    src: "/music-app1.png",
+    image: "/music-app1.png",
+    title: "Portfolio Website",
+    description: "A modern portfolio built with React and Tailwind CSS.",
+    languages: ["React", "Tailwind CSS", "JavaScript"],
+    url: "https://your-portfolio-app.com",
+    githubUrl: "https://github.com/yourusername/portfolio",
+  },
+      {
+    image: "/music-app1.png",
     title: "Portfolio Website",
     description: "A modern portfolio built with React and Tailwind CSS.",
     languages: ["React", "Tailwind CSS", "JavaScript"],

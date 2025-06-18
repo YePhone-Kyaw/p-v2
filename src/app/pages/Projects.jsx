@@ -67,10 +67,10 @@ const Experience = () => {
           <h1 className="flex text-2xl text-teal-300">Projects</h1>
           <span className="bg-teal-300 w-[100px] h-[1px]"></span>
         </div>
-        <div className="flex flex-col gap-20 ">
+        <div className="flex gap-20 ">
           {projects.map((project, i) => (
             <ProjectCard key={i} {...project}>
-              <div className="flex gap-2 mt-4">
+              <div className="flex w-[80px] mt-2">
                 <Button
                   href={project.url}
                   boxStyle="none"
@@ -90,8 +90,8 @@ const Experience = () => {
               </div>
             </ProjectCard>
           ))}
-          <MusicPlayer onDemoClick={handleDemoClick} />
-          <ReactScheduler onDemoClick={handleDemoClick} />
+          {/* <MusicPlayer onDemoClick={handleDemoClick} />
+          <ReactScheduler onDemoClick={handleDemoClick} /> */}
         </div>
       </div>
 
