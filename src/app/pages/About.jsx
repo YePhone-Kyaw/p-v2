@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
 import { resume } from "../constants";
 import TextCard from "@/components/TextCard";
+import IconWebDevelopment from "@/components/icons/web";
 
 const About = () => {
   const container = useRef(null);
@@ -99,7 +100,7 @@ const About = () => {
         <span className="bg-teal-300 w-[100px] h-[1px] "></span>
       </div>
       <div className=" flex">
-        <div className="flex flex-col justify-between md:items-start items-center w-1/2">
+        <div className="flex flex-col justify-between md:items-start items-center p-2 w-1/2">
           <img
             src="/me.jpg"
             alt="profile"
@@ -136,8 +137,8 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div>
-          <TextCard icon={} title="Web Development">Develop responsive high performance web applications using modern frameworks like React, Vue for frontend and Node.js, Laravel for backend</TextCard>
+        <div className="w-1/2 p-2">
+          <TextCard icon={<IconWebDevelopment />} title="Web Development">Develop responsive high performance web applications using modern frameworks like React, Vue for frontend and Node.js, Laravel for backend</TextCard>
         </div>
       </div>
     </div>
