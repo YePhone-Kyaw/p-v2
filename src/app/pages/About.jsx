@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
 import { resume } from "../constants";
+import TextCard from "@/components/TextCard";
 
 const About = () => {
   const container = useRef(null);
@@ -97,7 +98,7 @@ const About = () => {
         <h1 className="flex text-2xl text-teal-300">About Me</h1>
         <span className="bg-teal-300 w-[100px] h-[1px] "></span>
       </div>
-      <div className="">
+      <div className=" flex">
         <div className="flex flex-col justify-between md:items-start items-center w-1/2">
           <img
             src="/me.jpg"
@@ -135,7 +136,9 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div></div>
+        <div>
+          <TextCard title="Web Development">Develop & Build web application with React, Vue</TextCard>
+        </div>
       </div>
     </div>
   );

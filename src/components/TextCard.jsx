@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const TextCard = () => {
+const TextCard = ({ children, icon, title }) => {
   return (
-    <div>TextCard</div>
-  )
-}
+    <div className="p-3 bg-gray-300">
+      {icon}
+      <div>
+        <div>{title}</div>
+        <div>{children}</div>
+      </div>
+    </div>
+  );
+};
 
-export default TextCard
+export default TextCard;
