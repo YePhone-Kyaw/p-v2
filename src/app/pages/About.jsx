@@ -159,11 +159,9 @@ const About = () => {
                 <IconWebDevelopment />
               </span>
             }
-            title="Web Development"
+            title="Mobile Application Development"
           >
-            Develop responsive high performance web applications using modern
-            frameworks like React, Vue for frontend and Node.js, Laravel for
-            backend
+            Build cross-platform mobile applications using React Native, delivering smooth and consistent user experiences on both iOS and Android
           </TextCard>
         </div>
       </div>
