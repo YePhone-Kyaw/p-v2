@@ -10,10 +10,9 @@ const IconWebDevelopment = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="w-6 h-6 hover:-translate-y-1 transition-transform duration-300"
+    className="w-6 h-6"
   >
     <title>Web Development</title>
-    {/* Browser window */}
     <rect x="3" y="4" width="18" height="16" rx="2" />
     {/* Browser tabs */}
     <circle cx="7" cy="8" r="1" />
