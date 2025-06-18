@@ -14,7 +14,6 @@ const IconWebDevelopment = () => (
   >
     <title>Web Development</title>
     <rect x="3" y="4" width="18" height="16" rx="2" />
-    {/* Browser tabs */}
     <circle cx="7" cy="8" r="1" />
     <circle cx="11" cy="8" r="1" />
     <circle cx="15" cy="8" r="1" />
