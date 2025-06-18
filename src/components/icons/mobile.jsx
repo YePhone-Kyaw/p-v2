@@ -10,7 +10,7 @@ const IconMobileDevelopment = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="w-6 h-6 hover:-translate-y-1 transition-transform duration-300"
+    className="w-6 h-6"
   >
     <title>Mobile Application Development</title>
     {/* Phone body */}

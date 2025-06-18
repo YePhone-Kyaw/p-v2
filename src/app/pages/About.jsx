@@ -9,6 +9,9 @@ import { resume } from "../constants";
 import TextCard from "@/components/TextCard";
 import IconWebDevelopment from "@/components/icons/web";
 import IconMobileDevelopment from "@/components/icons/mobile";
+import IconDatabase from "@/components/icons/db";
+import IconAPI from "@/components/icons/api";
+import IconTesting from "@/components/icons/testing";
 
 const About = () => {
   const container = useRef(null);
@@ -89,9 +92,9 @@ const About = () => {
     //     </div>
     //   </div>
     // </section>
-    <div
+    <section
       id="about"
-      className="flex flex-col h-screen w-full items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
+      className="flex flex-col min-h-screen w-full px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
     >
       <div
         className={`title ${firaCode.className} flex items-center gap-5 mb-10`}
@@ -108,11 +111,11 @@ const About = () => {
               className="photo h-64 w-56 mb-10 rounded-lg"
             />
 
-            <div className="flex items-center gap-3 w-full">
-              <Button href="#contact" boxSize={300} boxStyle="outline">
+            <div className="flex items-center gap-3 justify-around w-[320px]">
+              <Button href="#contact" boxStyle="outline">
                 Get in touch
               </Button>
-              <Button href={resume} boxSize={300} boxStyle="outline">
+              <Button href={resume} boxStyle="outline">
                 Download CV
               </Button>
             </div>
@@ -168,9 +171,39 @@ const About = () => {
             delivering smooth and consistent user experiences on both iOS and
             Android
           </TextCard>
+          <TextCard
+            icon={
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
+                <IconDatabase />
+              </span>
+            }
+            title="Database Management"
+          >
+            Design, implement, and optimize relational and NoSQL databases to ensure data integrity, security, and high performance for web and mobile applications.
+          </TextCard>
+          <TextCard
+            icon={
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
+                <IconAPI />
+              </span>
+            }
+            title="API Development & Integration"
+          >
+           Develop robust RESTful and GraphQL APIs, and seamlessly integrate third-party services to enable efficient communication between frontend and backend systems.
+          </TextCard>
+          <TextCard
+            icon={
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
+                <IconTesting />
+              </span>
+            }
+            title="Software Testing & Quality Assurance"
+          >
+           Apply automated and manual testing strategies to ensure software reliability, maintainability, and a smooth user experience across platforms.
+          </TextCard>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
