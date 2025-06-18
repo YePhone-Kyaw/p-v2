@@ -12,6 +12,7 @@ import IconMobileDevelopment from "@/components/icons/mobile";
 import IconDatabase from "@/components/icons/db";
 import IconAPI from "@/components/icons/api";
 import IconTesting from "@/components/icons/testing";
+import AboutTextCard from "./components/AboutTextCard";
 
 const About = () => {
   const container = useRef(null);
@@ -102,8 +103,8 @@ const About = () => {
         <h1 className="flex text-2xl text-teal-300">About Me</h1>
         <span className="bg-teal-300 w-[100px] h-[1px] "></span>
       </div>
-      <div className=" flex">
-        <div className="flex flex-col justify-between items-center py-2 px-5 w-1/2">
+      <div className="flex flex-col items-center md:flex-row transition-none">
+        <div className="flex flex-col justify-between items-center py-2 px-5 md:w-1/2">
           <div className="flex flex-col items-center">
             <img
               src="/me.jpg"
@@ -122,7 +123,7 @@ const About = () => {
           </div>
 
           <div
-            className={`box ${poppins.className} text-md flex flex-col mt-5 gap-5 lg:max-w-[700px] md:max-w-[600px] max-w-full`}
+            className={`box ${poppins.className} text-center text-sm md:text-md flex flex-col mt-5 gap-5 lg:max-w-[700px] md:max-w-[600px] w-full`}
           >
             <p>
               Hello! My name is Ye Phone (Zayden) and I recently graduated from
@@ -146,62 +147,9 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="w-1/2 p-2 flex flex-col items-center space-y-5">
-          <TextCard
-            icon={
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
-                <IconWebDevelopment />
-              </span>
-            }
-            title="Web Development"
-          >
-            Develop responsive high performance web applications using modern
-            frameworks like React, Vue for frontend and Node.js, Laravel for
-            backend
-          </TextCard>
-          <TextCard
-            icon={
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
-                <IconMobileDevelopment />
-              </span>
-            }
-            title="Mobile Application Development"
-          >
-            Build cross-platform mobile applications using React Native,
-            delivering smooth and consistent user experiences on both iOS and
-            Android
-          </TextCard>
-          <TextCard
-            icon={
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
-                <IconDatabase />
-              </span>
-            }
-            title="Database Management"
-          >
-            Design, implement, and optimize relational and NoSQL databases to ensure data integrity, security, and high performance for web and mobile applications.
-          </TextCard>
-          <TextCard
-            icon={
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
-                <IconAPI />
-              </span>
-            }
-            title="API Development & Integration"
-          >
-           Develop robust RESTful and GraphQL APIs, and seamlessly integrate third-party services to enable efficient communication between frontend and backend systems.
-          </TextCard>
-          <TextCard
-            icon={
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
-                <IconTesting />
-              </span>
-            }
-            title="Software Testing & Quality Assurance"
-          >
-           Apply automated and manual testing strategies to ensure software reliability, maintainability, and a smooth user experience across platforms.
-          </TextCard>
-        </div>
+        <div className="w-1/2 p-2">
+        <AboutTextCard />
+        </div>   
       </div>
     </section>
   );
