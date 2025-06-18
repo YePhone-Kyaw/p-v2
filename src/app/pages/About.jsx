@@ -92,7 +92,6 @@ const About = () => {
       id="about"
       className="flex flex-col h-screen w-full items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
     >
-      
       <div
         className={`title ${firaCode.className} flex items-center gap-5 mb-10`}
       >
@@ -108,8 +107,12 @@ const About = () => {
           />
 
           <div className="flex items-center gap-3 w-full">
-            <Button href="#contact" boxStyle="outline">Get in touch</Button>
-            <Button href={resume} boxStyle="outline">Download CV</Button>
+            <Button href="#contact" boxStyle="outline">
+              Get in touch
+            </Button>
+            <Button href={resume} boxStyle="outline">
+              Download CV
+            </Button>
           </div>
 
           <div
@@ -138,7 +141,18 @@ const About = () => {
           </div>
         </div>
         <div className="w-1/2 p-2">
-          <TextCard icon={<IconWebDevelopment />} title="Web Development">Develop responsive high performance web applications using modern frameworks like React, Vue for frontend and Node.js, Laravel for backend</TextCard>
+          <TextCard
+            icon={
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-600/20">
+                <IconWebDevelopment />
+              </span>
+            }
+            title="Web Development"
+          >
+            Develop responsive high performance web applications using modern
+            frameworks like React, Vue for frontend and Node.js, Laravel for
+            backend
+          </TextCard>
         </div>
       </div>
     </div>
