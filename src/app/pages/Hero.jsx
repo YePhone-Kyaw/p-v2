@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <section
       id="top"
-      className="flex items-center justify-center min-h-screen px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 "
+      className="flex items-center justify-center min-h-screen px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
     >
       <div ref={container} className="w-full max-w-5xl relative z-10">
         <div className="flex flex-col gap-3">
@@ -64,11 +64,8 @@ const Hero = () => {
             </div>
           </div>
 
-          <p id="hero" className={`${poppins.className} md:text-lg`}>
-            I'm a junior software developer based in Calgary, Alberta, Canada.
-            I'm passionate about coding and problem-solving. Additionally, I'm
-            eager to learn new technologies, sharpen and improve my data
-            structure and algorithms skills.
+          <p id="hero" className={`${poppins.className} text-md md:text-lg`}>
+            I craft robust web and mobile applications that blend elegant design with powerful functionality. With a strong foundation in modern frameworks and a love for solving complex problems, I turn ideas into seamless digital experiences. Let’s build something remarkable together!
           </p>
 
           <div className="mt-4">
