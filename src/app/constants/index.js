@@ -131,7 +131,7 @@ export const projects = [
     githubUrl: "https://github.com/YePhone-Kyaw/music-app",
   },
       {
-    image: "/logo.png",
+    image: "/powershift.png",
     title: "PowerShift Scheduler",
     description: "A modern portfolio built with React and Tailwind CSS.",
     languages: ["React + Vite", "Tailwind CSS", "JavaScript", 'Node.js', 'PostgreSQL', 'RESTful API'],
