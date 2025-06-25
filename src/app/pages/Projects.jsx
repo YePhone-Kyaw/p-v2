@@ -13,11 +13,6 @@ import Button from "@/components/Button";
 import IconGitHub from "@/components/icons/github";
 import IconExternal from "@/components/icons/external";
 
-const YouTube_Ids = {
-  music: "https://youtube.com/embed/RaE6K1q_BSM?si=F49Sljtw2dJzwM6y",
-  scheduler: "https://www.youtube.com/embed/vd9YsnM-0nU?si=9axGCpgvRdA6oF-c",
-};
-
 const Experience = () => {
   const [showVideo, setShowVideo] = useState(null);
 
