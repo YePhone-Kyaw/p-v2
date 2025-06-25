@@ -16,13 +16,13 @@ import IconExternal from "@/components/icons/external";
 const Experience = () => {
   const [showVideo, setShowVideo] = useState(null);
 
-  const handleDemoClick = (project) => {
-    setShowVideo(project);
-  };
+  // const handleDemoClick = (project) => {
+  //   setShowVideo(project);
+  // };
 
-  const handleCloseVideo = () => {
-    setShowVideo(null);
-  };
+  // const handleCloseVideo = () => {
+  //   setShowVideo(null);
+  // };
 
   const container = useRef(null);
   gsap.registerPlugin(useGSAP, ScrollTrigger);
