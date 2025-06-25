@@ -132,7 +132,7 @@ export const projects = [
   },
       {
     image: "/music-app1.png",
-    title: "Portfolio Website",
+    title: "PowerShift Scheduler",
     description: "A modern portfolio built with React and Tailwind CSS.",
     languages: ["React", "Tailwind CSS", "JavaScript"],
     linkIcon: <IconExternal />,
