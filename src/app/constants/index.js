@@ -123,7 +123,7 @@ export const projects = [
   },
     {
     image: "/music-app1.png",
-    title: "Muzic Mobile Application",
+    title: "Muzic",
     description: "A sleek cross-platform music player that delivers a smooth listening experience",
     languages: ["React Native", "Tailwind CSS", "TypeScript", "Expo", "Axios"],
     linkIcon: <IconQRCode />,
