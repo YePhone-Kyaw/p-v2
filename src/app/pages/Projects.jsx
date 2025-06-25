@@ -77,7 +77,7 @@ const Experience = () => {
                   className="flex items-center gap-2"
                   target='_blank'
                 >
-                  <IconExternal />
+                  {project.linkIcon}
                 </Button>
                 <Button
                   href={project.githubUrl}

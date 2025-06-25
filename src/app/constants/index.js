@@ -1,6 +1,8 @@
 import IconAPI from "@/components/icons/api";
 import IconDatabase from "@/components/icons/db";
+import IconExternal from "@/components/icons/external";
 import IconMobileDevelopment from "@/components/icons/mobile";
+import IconQRCode from "@/components/icons/qrcode";
 import IconTesting from "@/components/icons/testing";
 import IconWebDevelopment from "@/components/icons/web";
 
@@ -113,24 +115,27 @@ export const projects = [
   {
     image: "/portfolio.png",
     title: "My Portfolio",
-    description: "A modern portfolio built with ThreeJs, React and Tailwind CSS.",
+    description: "A modern, responsive portfolio showing my skills, projects as a software developer.",
     languages: ["ThreeJS", "React", "Tailwind CSS", "JavaScript"],
+    linkIcon: <IconExternal />,
     url: "https://p-v1-three.vercel.app/",
-    githubUrl: "https://github.com/yourusername/portfolio",
+    githubUrl: "https://github.com/YePhone-Kyaw/p-v2",
   },
     {
     image: "/music-app1.png",
-    title: "Portfolio Website",
-    description: "A modern portfolio built with React and Tailwind CSS.",
-    languages: ["React", "Tailwind CSS", "JavaScript"],
-    url: "https://your-portfolio-app.com",
-    githubUrl: "https://github.com/yourusername/portfolio",
+    title: "Muzic Mobile Application",
+    description: "A sleek cross-platform music player that delivers a smooth listening experience",
+    languages: ["React Native", "Tailwind CSS", "TypeScript", "Expo", "Axios"],
+    linkIcon: <IconQRCode />,
+    url: "/muzic.png",
+    githubUrl: "https://github.com/YePhone-Kyaw/music-app",
   },
       {
     image: "/music-app1.png",
     title: "Portfolio Website",
     description: "A modern portfolio built with React and Tailwind CSS.",
     languages: ["React", "Tailwind CSS", "JavaScript"],
+    linkIcon: <IconExternal />,
     url: "https://your-portfolio-app.com",
     githubUrl: "https://github.com/yourusername/portfolio",
   },
