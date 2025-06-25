@@ -90,8 +90,6 @@ const Experience = () => {
               </div>
             </ProjectCard>
           ))}
-          {/* <MusicPlayer onDemoClick={handleDemoClick} />
-          <ReactScheduler onDemoClick={handleDemoClick} /> */}
         </div>
       </div>
 
