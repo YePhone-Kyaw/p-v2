@@ -14,22 +14,48 @@ import IconGitHub from "@/components/icons/github";
 import IconExternal from "@/components/icons/external";
 import Slider from "react-slick";
 
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const CustomArrow = ({ type, onClick }) => {
-  const isNext = type === 'next';
+  const isNext = type === "next";
   return (
     <button
       className={`absolute top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-teal-600/50 text-teal-300 hover:bg-teal-400/60
-                  ${isNext ? 'right-0 md:-right-12' : 'left-0 md:-left-12'}`} // Position arrows
+                  ${isNext ? "right-0 md:-right-12" : "left-0 md:-left-12"}`} // Position arrows
       onClick={onClick}
       aria-label={isNext ? "Next Project" : "Previous Project"}
     >
       {isNext ? (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
       ) : (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
       )}
     </button>
   );
@@ -88,7 +114,7 @@ const Experience = () => {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          centerPadding: '100px',
+          centerPadding: "100px",
           slidesToScroll: 1,
         },
       },
@@ -108,34 +134,32 @@ const Experience = () => {
           <span className="bg-teal-300 w-[100px] h-[1px]"></span>
         </div>
         <div className="relative mx-auto w-full max-w-4xl">
-        <Slider ref={sliderRef} {...settings}>
-          {/* <div className="flex gap-20 "> */}
+          <Slider ref={sliderRef} {...settings}>
             {projects.map((project) => (
-      <div key={project.id} className="p-4 project-card-wrapper"> 
-        <ProjectCard {...project}>
-          <div className="flex w-[80px] mt-2 justify-center mx-auto">
-            <Button
-              href={project.url}
-              boxStyle="none"
-              className="flex items-center gap-2"
-              target="_blank"
-            >
-              {project.linkIcon}
-            </Button>
-            <Button
-              href={project.githubUrl}
-              boxStyle="none"
-              className="flex items-center gap-2"
-              target="_blank"
-            >
-              <IconGitHub />
-            </Button>
-          </div>
-        </ProjectCard>
-      </div>
-    ))}
-          {/* </div> */}
-        </Slider>
+              <div key={project.id} className="p-4 project-card-wrapper">
+                <ProjectCard {...project}>
+                  <div className="flex w-[80px] mt-2 justify-center mx-auto">
+                    <Button
+                      href={project.url}
+                      boxStyle="none"
+                      className="flex items-center gap-2"
+                      target="_blank"
+                    >
+                      {project.linkIcon}
+                    </Button>
+                    <Button
+                      href={project.githubUrl}
+                      boxStyle="none"
+                      className="flex items-center gap-2"
+                      target="_blank"
+                    >
+                      <IconGitHub />
+                    </Button>
+                  </div>
+                </ProjectCard>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </section>
@@ -143,4 +167,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
