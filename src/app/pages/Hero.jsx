@@ -44,11 +44,11 @@ const Hero = () => {
             Hi there, my name is{" "}
           </h5>
           <div className={`${firaCode.className}`}>
-            <div className="flex items-end gap-5 font-sans font-bold mb-5">
-              <h1 id="name" className="text-5xl md:text-6xl">
+            <div id="name"  className="flex items-end gap-5 font-sans font-bold mb-5">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl">
                 Ye Phone Kyaw
               </h1>
-              <h3 className="text-xl md:text-2xl">(Zayden)</h3>
+              <h3 className="text-lg md:text-xl lg:text-2xl">(Zayden)</h3>
             </div>
             <div id="text">
               <TypeAnimation
