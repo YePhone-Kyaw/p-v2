@@ -1,8 +1,6 @@
 "use client";
 
 import ProjectCard from "@/components/ProjectCard";
-import MusicPlayer from "@/components/projects/MusicPlayer";
-import ReactScheduler from "@/components/projects/ReactScheduler";
 import { firaCode, poppins } from "@/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
