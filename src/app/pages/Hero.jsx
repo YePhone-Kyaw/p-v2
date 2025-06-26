@@ -44,12 +44,12 @@ const Hero = () => {
             Hi there, my name is{" "}
           </h5>
           <div className={`${firaCode.className}`}>
-            <h1
-              id="name"
-              className="text-5xl md:text-6xl font-sans font-bold mb-5"
-            >
-              Ye Phone Kyaw
-            </h1>
+            <div className="flex items-end gap-5 font-sans font-bold mb-5">
+              <h1 id="name" className="text-5xl md:text-6xl">
+                Ye Phone Kyaw
+              </h1>
+              <h3 className="text-xl md:text-2xl">(Zayden)</h3>
+            </div>
             <div id="text">
               <TypeAnimation
                 preRenderFirstString={true}
@@ -65,7 +65,11 @@ const Hero = () => {
           </div>
 
           <p id="hero" className={`${poppins.className} text-md md:text-lg`}>
-            I craft robust web and mobile applications that blend elegant design with powerful functionality. With a strong foundation in modern frameworks and a love for solving complex problems, I turn ideas into seamless digital experiences. Let’s build something remarkable together!
+            I craft robust web and mobile applications that blend elegant design
+            with powerful functionality. With a strong foundation in modern
+            frameworks and a love for solving complex problems, I turn ideas
+            into seamless digital experiences. Let’s build something remarkable
+            together!
           </p>
 
           <div className="mt-4">

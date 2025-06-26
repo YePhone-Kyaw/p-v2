@@ -9,25 +9,24 @@ import IconWebDevelopment from "@/components/icons/web";
 export const navLinks = [
   {
     id: 1,
-    name: "Awards",
-    href: "#awards",
-  },
-  {
-    id: 2,
     name: "About",
     href: "#about",
   },
   {
-    id: 3,
+    id: 2,
     name: "Projects",
     href: "#projects",
+  },
+  {
+    id: 3,
+    name: "Award",
+    href: "#awards",
   },
   {
     id: 4,
     name: "Skills",
     href: "#skills",
   },
-
   {
     id: 5,
     name: "Contact",
@@ -158,7 +157,7 @@ export const projects = [
     url: "https://your-portfolio-app.com",
     githubUrl: "https://github.com/yourusername/portfolio",
   },
-   {
+  {
     id: 4,
     image: "/portfolio.png",
     title: "My Portfolio",

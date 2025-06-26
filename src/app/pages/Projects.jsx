@@ -1,15 +1,14 @@
 "use client";
 
 import ProjectCard from "@/components/ProjectCard";
-import { firaCode, poppins } from "@/fonts/fonts";
+import { firaCode } from "@/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { projects } from "../constants";
 import Button from "@/components/Button";
 import IconGitHub from "@/components/icons/github";
-import IconExternal from "@/components/icons/external";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -20,7 +19,7 @@ const CustomArrow = ({ type, onClick }) => {
   return (
     <button
       className={`absolute top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-teal-600/50 text-teal-300 hover:bg-teal-400/60
-                  ${isNext ? "right-0 md:-right-12" : "left-0 md:-left-12"}`} // Position arrows
+                  ${isNext ? "right-0 md:-right-12" : "left-0 md:-left-12"}`}
       onClick={onClick}
       aria-label={isNext ? "Next Project" : "Previous Project"}
     >
@@ -81,7 +80,7 @@ const Experience = () => {
   );
 
   const settings = {
-    className: "center",
+    className: "center-mode-slider",
     centerMode: true,
     infinite: true,
     centerPadding: "0px",
@@ -94,23 +93,17 @@ const Experience = () => {
       {
         breakpoint: 1024,
         settings: {
+          centerMode: true,
           slidesToShow: 3,
-          infinite: true,
-          dots: true,
+          arrows: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
+          centerMode: true,
           slidesToShow: 1,
-          centerPadding: "100px",
+          arrows: true,
         },
       },
     ],
@@ -119,19 +112,22 @@ const Experience = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col min-h-screen w-full items-center justify-center py-10 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
+      className="flex flex-col min-h-screen w-full items-center justify-center py-10 px-4 md:px-16"
     >
-      <div ref={container} className="w-full max-w-5xl">
+      <div ref={container} className="w-full max-w-6xl">
         <div
           className={`title ${firaCode.className} flex items-center gap-5 mb-10`}
         >
           <h1 className="flex text-2xl text-teal-300">Projects</h1>
           <span className="bg-teal-300 w-[100px] h-[1px]"></span>
         </div>
-        <div className="relative mx-auto w-full max-w-4xl">
+        <div className="flex flex-col mx-auto w-full">
           <Slider ref={sliderRef} {...settings}>
             {projects.map((project) => (
-              <div key={project.id} className="p-4 project-card-wrapper">
+              <div
+                key={project.id}
+                className="scale-[0.75] md:scale-[0.75] lg:scale-[1]"
+              >
                 <ProjectCard {...project}>
                   <div className="flex w-[80px] mt-2 justify-center mx-auto">
                     <Button

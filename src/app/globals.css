@@ -9,19 +9,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: radial-gradient(circle,rgba(9, 0, 41, 1) 26%, rgba(8, 17, 77, 1) 73%, rgba(12, 27, 28, 1) 100%);
+    --background: radial-gradient(
+      circle,
+      rgba(9, 0, 41, 1) 26%,
+      rgba(8, 17, 77, 1) 73%,
+      rgba(12, 27, 28, 1) 100%
+    );
     --foreground: #ededed;
   }
 }
 
-html, body {
+html,
+body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, "Poppins", sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
 
 .nav-ul {
   display: flex;
@@ -34,7 +39,7 @@ html, body {
 }
 
 .nav-li:hover {
-  color: '#008080';
+  color: "#008080";
 }
 
 li::marker {
@@ -80,27 +85,38 @@ li::marker {
   }
 }
 
-
-/* Target the main container for the slides */
-.slick-slider .slick-list {
-  padding-top: 2rem !important; 
-  padding-bottom: 2rem !important; 
+.slick-slide {
+  padding: 0 8px;
 }
 
-/* Style for all slides */
-.slick-slide > div {
+.slick-list {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center-mode-slider .slick-slide > div {
   transform: scale(0.75);
-  transition: transform 0.4s ease-in-out;
-  opacity: 0.5;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 0.6;
 }
 
-/* Style for the active, centered slide */
-.slick-slide.slick-center > div {
+.center-mode-slider .slick-slide.slick-center > div {
   transform: scale(1);
   opacity: 1;
 }
 
-/* Make the centered card's links clickable */
-.slick-slide:not(.slick-center) {
+.center-mode-slider .slick-slide:not(.slick-center) {
   pointer-events: none;
+}
+
+.slick-slide > div {
+  transform: none;
+  opacity: 1;
 }

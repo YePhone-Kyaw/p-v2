@@ -34,7 +34,6 @@ const Contact = () => {
     setName("");
     setMessage("");
   };
-  console.log(email);
   return (
     <section
       id="contact"
