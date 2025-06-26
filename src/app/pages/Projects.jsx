@@ -111,7 +111,7 @@ const Experience = () => {
         <Slider ref={sliderRef} {...settings}>
           {/* <div className="flex gap-20 "> */}
             {projects.map((project) => (
-      <div key={project.id} className="p-4 project-card-wrapper"> {/* Each slide needs a key */}
+      <div key={project.id} className="p-4 project-card-wrapper"> 
         <ProjectCard {...project}>
           <div className="flex w-[80px] mt-2 justify-center mx-auto">
             <Button
