@@ -12,19 +12,33 @@ import { projects } from "../constants";
 import Button from "@/components/Button";
 import IconGitHub from "@/components/icons/github";
 import IconExternal from "@/components/icons/external";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+const CustomArrow = ({ type, onClick }) => {
+  const isNext = type === 'next';
+  return (
+    <button
+      className={`absolute top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-teal-600/50 text-teal-300 hover:bg-teal-400/60
+                  ${isNext ? 'right-0 md:-right-12' : 'left-0 md:-left-12'}`} // Position arrows
+      onClick={onClick}
+      aria-label={isNext ? "Next Project" : "Previous Project"}
+    >
+      {isNext ? (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+      ) : (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+      )}
+    </button>
+  );
+};
 
 const Experience = () => {
-  const [showVideo, setShowVideo] = useState(null);
-
-  // const handleDemoClick = (project) => {
-  //   setShowVideo(project);
-  // };
-
-  // const handleCloseVideo = () => {
-  //   setShowVideo(null);
-  // };
-
   const container = useRef(null);
+  const sliderRef = useRef(null);
+
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
   useGSAP(
@@ -42,13 +56,44 @@ const Experience = () => {
     { scope: container }
   );
 
-  useEffect(() => {
-    if (showVideo) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [showVideo]);
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "0px",
+    slidesToShow: 3,
+    speed: 500,
+    arrows: true,
+    nextArrow: <CustomArrow type="next" />,
+    prevArrow: <CustomArrow type="prev" />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '100px',
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <section
@@ -62,34 +107,134 @@ const Experience = () => {
           <h1 className="flex text-2xl text-teal-300">Projects</h1>
           <span className="bg-teal-300 w-[100px] h-[1px]"></span>
         </div>
-        <div className="flex gap-20 ">
-          {projects.map((project, i) => (
-            <ProjectCard key={i} {...project}>
-              <div className="flex w-[80px] mt-2">
-                <Button
-                  href={project.url}
-                  boxStyle="none"
-                  className="flex items-center gap-2"
-                  target='_blank'
-                >
-                  {project.linkIcon}
-                </Button>
-                <Button
-                  href={project.githubUrl}
-                  boxStyle="none"
-                  className="flex items-center gap-2"
-                  target="_blank"
-                >
-                  <IconGitHub />
-                </Button>
-              </div>
-            </ProjectCard>
-          ))}
+        <div className="relative mx-auto w-full max-w-4xl">
+        <Slider ref={sliderRef} {...settings}>
+          {/* <div className="flex gap-20 "> */}
+            {projects.map((project) => (
+      <div key={project.id} className="p-4 project-card-wrapper"> {/* Each slide needs a key */}
+        <ProjectCard {...project}>
+          <div className="flex w-[80px] mt-2 justify-center mx-auto">
+            <Button
+              href={project.url}
+              boxStyle="none"
+              className="flex items-center gap-2"
+              target="_blank"
+            >
+              {project.linkIcon}
+            </Button>
+            <Button
+              href={project.githubUrl}
+              boxStyle="none"
+              className="flex items-center gap-2"
+              target="_blank"
+            >
+              <IconGitHub />
+            </Button>
+          </div>
+        </ProjectCard>
+      </div>
+    ))}
+          {/* </div> */}
+        </Slider>
         </div>
       </div>
-
     </section>
   );
 };
 
 export default Experience;
+
+// src/app/sections/Experience.js
+
+// "use client";
+
+// import React, { useRef } from "react";
+// import Slider from "react-slick"; // Import the main component
+// import ProjectCard from "@/components/ProjectCard";
+// import Button from "@/components/Button";
+// import IconGitHub from "@/components/icons/github";
+// import IconExternal from "@/components/icons/external";
+// import { projects } from "../constants";
+// import { firaCode } from "@/fonts/fonts";
+
+// // Import Slick's CSS files
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
+// // We can remove all GSAP and useGSAP imports for the carousel
+
+// const Experience = () => {
+//   const sliderRef = useRef(null);
+
+//   // Settings object for the react-slick carousel
+//   const settings = {
+//     className: "center", // Add a custom class for styling
+//     centerMode: true,    // Enables center view with partial prev/next slides
+//     infinite: true,      // Enables infinite looping
+//     centerPadding: "0px", // Adjust if you want more space on the sides
+//     slidesToShow: 3,     // How many slides to show at once
+//     speed: 500,          // Animation speed in ms
+//     responsive: [        // Responsive settings
+//       {
+//         breakpoint: 768, // On screens smaller than 768px
+//         settings: {
+//           slidesToShow: 1,
+//           centerPadding: "65px",
+//         }
+//       }
+//     ]
+//   };
+
+//   const goToNext = () => {
+//     sliderRef.current.slickNext();
+//   };
+
+//   const goToPrev = () => {
+//     sliderRef.current.slickPrev();
+//   };
+
+//   return (
+//     <section
+//       id="projects"
+//       className="flex flex-col min-h-screen w-full items-center justify-center py-20 px-4 overflow-hidden"
+//     >
+//       <div className="w-full max-w-6xl flex flex-col items-center">
+//         <div className={`title ${firaCode.className} flex items-center gap-5 mb-8 self-start`}>
+//           <h1 className="flex text-2xl text-teal-300">Projects</h1>
+//           <span className="bg-teal-300 w-[100px] h-[1px]"></span>
+//         </div>
+
+//         <div className="relative w-full">
+//             {/* Custom Previous Arrow */}
+//             <button onClick={goToPrev} className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 text-3xl" aria-label="Previous Project">
+
+//             </button>
+
+//             <Slider ref={sliderRef} {...settings}>
+//                 {projects.map((project) => (
+//                     <div key={project.id} className="p-4"> {/* Add padding around each card */}
+//                         <ProjectCard {...project}>
+//                             <div className="flex justify-center w-full mt-4 gap-4">
+//                                 <Button href={project.url} boxStyle="none" target="_blank" aria-label={`${project.title} live demo`}>
+//                                     {project.linkIcon}
+//                                 </Button>
+//                                 <Button href={project.githubUrl} boxStyle="none" target="_blank" aria-label={`${project.title} GitHub repository`}>
+//                                     <IconGitHub />
+//                                 </Button>
+//                             </div>
+//                         </ProjectCard>
+//                     </div>
+//                 ))}
+//             </Slider>
+
+//             {/* Custom Next Arrow */}
+//             <button onClick={goToNext} className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 text-3xl" aria-label="Next Project">
+
+//             </button>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Experience;

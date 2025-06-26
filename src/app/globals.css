@@ -80,3 +80,28 @@ li::marker {
   }
 }
 
+/* src/app/globals.css */
+
+/* Target the main container for the slides */
+.slick-slider .slick-list {
+  padding-top: 2rem !important; /* Add space at top for scaled-up card */
+  padding-bottom: 2rem !important; /* Add space at bottom */
+}
+
+/* Style for all slides */
+.slick-slide > div {
+  transform: scale(0.75);
+  transition: transform 0.4s ease-in-out;
+  opacity: 0.5;
+}
+
+/* Style for the active, centered slide */
+.slick-slide.slick-center > div {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Make the centered card's links clickable */
+.slick-slide:not(.slick-center) {
+  pointer-events: none;
+}

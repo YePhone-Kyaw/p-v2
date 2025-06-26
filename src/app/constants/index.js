@@ -113,33 +113,98 @@ export const cards = [
 
 export const projects = [
   {
+    id: 1,
     image: "/portfolio.png",
     title: "My Portfolio",
-    description: "A modern, responsive portfolio showing my skills, projects as a software developer.",
+    description:
+      "A modern, responsive portfolio showing my skills, projects as a software developer.",
     languages: ["ThreeJS", "React", "Tailwind CSS", "JavaScript"],
     linkIcon: <IconExternal />,
     url: "https://p-v1-three.vercel.app/",
     githubUrl: "https://github.com/YePhone-Kyaw/p-v2",
   },
-    {
+  {
+    id: 2,
     image: "/music-app1.png",
     title: "Muzic",
-    description: "A sleek cross-platform music player that delivers a smooth listening experience",
-    languages: ["React Native", "Tailwind CSS", "TypeScript", "Expo", "Axios", 'DeezerAPI'],
+    description:
+      "A sleek cross-platform music player that delivers a smooth listening experience",
+    languages: [
+      "React Native",
+      "Tailwind CSS",
+      "TypeScript",
+      "Expo",
+      "Axios",
+      "DeezerAPI",
+    ],
     linkIcon: <IconQRCode />,
     url: "/muzic.png",
     githubUrl: "https://github.com/YePhone-Kyaw/music-app",
   },
-      {
+  {
+    id: 3,
     image: "/powershift.png",
     title: "PowerShift Scheduler",
     description: "A modern portfolio built with React and Tailwind CSS.",
-    languages: ["React + Vite", "Tailwind CSS", "JavaScript", 'Node.js', 'PostgreSQL', 'RESTful API'],
+    languages: [
+      "React + Vite",
+      "Tailwind CSS",
+      "JavaScript",
+      "Node.js",
+      "PostgreSQL",
+      "RESTful API",
+    ],
     linkIcon: <IconExternal />,
     url: "https://your-portfolio-app.com",
     githubUrl: "https://github.com/yourusername/portfolio",
   },
-]
+   {
+    id: 4,
+    image: "/portfolio.png",
+    title: "My Portfolio",
+    description:
+      "A modern, responsive portfolio showing my skills, projects as a software developer.",
+    languages: ["ThreeJS", "React", "Tailwind CSS", "JavaScript"],
+    linkIcon: <IconExternal />,
+    url: "https://p-v1-three.vercel.app/",
+    githubUrl: "https://github.com/YePhone-Kyaw/p-v2",
+  },
+  {
+    id: 5,
+    image: "/music-app1.png",
+    title: "Muzic",
+    description:
+      "A sleek cross-platform music player that delivers a smooth listening experience",
+    languages: [
+      "React Native",
+      "Tailwind CSS",
+      "TypeScript",
+      "Expo",
+      "Axios",
+      "DeezerAPI",
+    ],
+    linkIcon: <IconQRCode />,
+    url: "/muzic.png",
+    githubUrl: "https://github.com/YePhone-Kyaw/music-app",
+  },
+  {
+    id: 6,
+    image: "/powershift.png",
+    title: "PowerShift Scheduler",
+    description: "A modern portfolio built with React and Tailwind CSS.",
+    languages: [
+      "React + Vite",
+      "Tailwind CSS",
+      "JavaScript",
+      "Node.js",
+      "PostgreSQL",
+      "RESTful API",
+    ],
+    linkIcon: <IconExternal />,
+    url: "https://your-portfolio-app.com",
+    githubUrl: "https://github.com/yourusername/portfolio",
+  },
+];
 
 export const skills = [
   {
