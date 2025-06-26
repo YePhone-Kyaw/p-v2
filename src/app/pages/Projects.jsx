@@ -97,7 +97,6 @@ const Experience = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
           infinite: true,
           dots: true,
         },
@@ -106,7 +105,6 @@ const Experience = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
           initialSlide: 2,
         },
       },
@@ -115,7 +113,6 @@ const Experience = () => {
         settings: {
           slidesToShow: 1,
           centerPadding: "100px",
-          slidesToScroll: 1,
         },
       },
     ],
