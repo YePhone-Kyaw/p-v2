@@ -10,7 +10,7 @@ const IconExternal = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="w-5 h-5"
+    className="w-6 h-6 hover:-translate-y-1 transition-transform duration-300"
   >
     <title>Open the application</title>
     <rect x="3" y="3" width="18" height="18" rx="2" />

@@ -10,14 +10,12 @@ const YycHack = () => {
   useGSAP(() => {
     gsap.timeline({
       scrollTrigger: {
-        trigger: '#description',
+        trigger: '#description, #img, #tech',
         start: 'top center',
       }
     })
-    .from('#description', {x:-300, opacity: 0, delay:1})
-    .from('#img', {x:300, opacity: 0})
-    .from('#tech', {x: 300, opacity:0, stagger: 0.3})
-    .from('#icon', {y:-30, opacity:0, stagger: 0.2, ease: 'bounce'})
+    .from('#img, #description', {x:-300, opacity: 0, delay:1})
+    .from('#tech', {x: 200, opacity:0, stagger: 0.2})
   }, {scope: container})
 
   useGSAP(() => {

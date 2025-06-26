@@ -14,7 +14,6 @@ const Awards = () => {
     gsap.from('#achievements', {
       opacity: 0,
       x: 300,
-      duration: 1,
       scrollTrigger: {
         trigger: '#achievements',
         start: 'top center',

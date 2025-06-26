@@ -155,7 +155,7 @@ export const projects = [
     ],
     linkIcon: <IconExternal />,
     url: "https://your-portfolio-app.com",
-    githubUrl: "https://github.com/yourusername/portfolio",
+    githubUrl: "https://github.com/YePhone-Kyaw/React-Scheduler",
   },
   {
     id: 4,
@@ -201,7 +201,7 @@ export const projects = [
     ],
     linkIcon: <IconExternal />,
     url: "https://your-portfolio-app.com",
-    githubUrl: "https://github.com/yourusername/portfolio",
+    githubUrl: "https://github.com/YePhone-Kyaw/React-Scheduler",
   },
 ];
 

@@ -9,7 +9,7 @@ const ProjectCard = ({
   languages,
   children,
 }) => (
-  <div className="flex flex-col items-center p-3 border-2 border-teal-300 bg-teal-600/20 w-[300px] rounded-xl hover:scale-[1.02] transition-transform hover:bg-teal-400/40">
+  <div className="flex flex-col items-center p-3 border-2 border-teal-300 bg-teal-600/20 w-[300px] rounded-xl hover:scale-[1.02] transition-transform ">
     <div className="h-40 w-full items-center">
       <img
         src={image}

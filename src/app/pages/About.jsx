@@ -68,7 +68,7 @@ const About = () => {
               <Button href="#contact" boxStyle="outline">
                 Get in touch
               </Button>
-              <Button href={resume} boxStyle="outline">
+              <Button href={resume} boxStyle="outline" target='_blank'>
                 Download CV
               </Button>
             </div>

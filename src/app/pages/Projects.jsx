@@ -18,7 +18,7 @@ const CustomArrow = ({ type, onClick }) => {
   const isNext = type === "next";
   return (
     <button
-      className={`absolute top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-teal-600/50 text-teal-300 hover:bg-teal-400/60
+      className={`arrows absolute top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-teal-600/50 text-teal-300 hover:bg-teal-400/60
                   ${isNext ? "right-0 md:-right-12" : "left-0 md:-left-12"}`}
       onClick={onClick}
       aria-label={isNext ? "Next Project" : "Previous Project"}
@@ -66,15 +66,15 @@ const Experience = () => {
 
   useGSAP(
     () => {
-      gsap.from(".title", {
-        opacity: 0,
-        x: 300,
-        duration: 1,
+      gsap.timeline({
         scrollTrigger: {
-          trigger: ".title",
-          start: "top center",
-        },
-      });
+          trigger: '.title, .cards, .arrows',
+          start: 'top center',
+        }
+      })
+      .from('.title', {opacity: 0, x:300})
+      .from('.cards', {opacity:0, y: 100, delay:0.5})
+      .from('.arrows', {opacity:0, y: 100})
     },
     { scope: container }
   );
@@ -121,7 +121,7 @@ const Experience = () => {
           <h1 className="flex text-2xl text-teal-300">Projects</h1>
           <span className="bg-teal-300 w-[100px] h-[1px]"></span>
         </div>
-        <div className="flex flex-col mx-auto w-full">
+        <div className="cards flex flex-col mx-auto w-full">
           <Slider ref={sliderRef} {...settings}>
             {projects.map((project) => (
               <div
@@ -129,7 +129,7 @@ const Experience = () => {
                 className="scale-[0.75] md:scale-[0.75] lg:scale-[1]"
               >
                 <ProjectCard {...project}>
-                  <div className="flex w-[80px] mt-2 justify-center mx-auto">
+                  <div className="flex w-[80px] mt-2 justify-center mx-auto ">
                     <Button
                       href={project.url}
                       boxStyle="none"
