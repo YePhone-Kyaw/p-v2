@@ -84,8 +84,7 @@ li::marker {
 /* Target the main container for the slides */
 .slick-slider .slick-list {
   padding-top: 2rem !important; 
-  padding-bottom: 2rem !important; /* Add space at bottom */
-}
+  padding-bottom: 2rem !important; 
 
 /* Style for all slides */
 .slick-slide > div {
