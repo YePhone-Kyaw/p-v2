@@ -165,7 +165,7 @@ export const projects = [
       "A modern, responsive portfolio showing my skills, projects as a software developer.",
     languages: ["ThreeJS", "React", "Tailwind CSS", "JavaScript"],
     linkIcon: <IconExternal />,
-    url: "https://p-v1-three.vercel.app/",
+    url: "https://pet-care-iota-bay.vercel.app/",
     githubUrl: "https://github.com/YePhone-Kyaw/p-v2",
   },
   {
