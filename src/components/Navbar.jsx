@@ -123,11 +123,11 @@ const Navbar = () => {
                     smooth={true}
                     duration={300}
                     offset={0}
-                    className="group block w-full text-lg font-semibold text-neutral-100 rounded-xl px-4 py-3 text-center hover:bg-white/10 hover:text-teal-400 transition-all duration-200 shadow-sm backdrop-blur-md flex items-center justify-between"
+                    className="group w-full text-lg font-semibold text-neutral-100 rounded-xl px-4 py-3 text-center hover:bg-white/10 hover:text-teal-400 transition-all duration-200 shadow-sm backdrop-blur-md flex items-center justify-between"
                     onClick={handleLinkClick}
                   >
                     <span className="mx-auto">{item.name}</span>
-                    {/* <ChevronRightIcon className="w-5 h-5 text-teal-400 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition" /> */}
+                    
                   </Link>
                 </li>
               ))}
