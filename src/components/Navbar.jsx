@@ -94,9 +94,7 @@ const Navbar = () => {
     </nav>
       {isOpen && (
         <>
-          {/* Overlay */}
           <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm animate-fade-in" onClick={toggleMenu}></div>
-          {/* Slide-down menu with fold-up animation on close */}
           <div
             id='mobile-nav'
             className={`fixed left-0 top-16 z-50 w-full h-[65vh] bg-gradient-to-br from-blue-900/90 via-blue-800/80 to-purple-900/90 shadow-2xl rounded-b-3xl border-b border-white/20 px-6 pt-6 flex flex-col items-center ${isClosing ? 'animate-fold-up' : 'animate-slide-down'}`}
