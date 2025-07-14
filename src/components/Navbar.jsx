@@ -7,18 +7,36 @@ import { Link } from "react-scroll";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ZLogo from "./ZLogo";
+import HamburgerIcon from "./HamburgerIcon";
+import ChevronRightIcon from "./ChevronRightIcon";
+import CloseIcon from "./CloseIcon";
 
 const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const [previousScroll, setPreviousScroll] = useState(0);
   const [visible, setVisible] = useState(true);
 
-  const toggleMenu = () => setIsOpen((prevIsOpen) => !prevIsOpen);
+  const closeMenu = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsOpen(false);
+      setIsClosing(false);
+    }, 400); // match animation duration
+  };
+
+  const toggleMenu = () => {
+    if (isOpen) {
+      closeMenu();
+    } else {
+      setIsOpen(true);
+    }
+  };
 
   const handleLinkClick = () => {
-    setIsOpen(false);
-  }
+    closeMenu();
+  };
 
   const container = useRef();
   
@@ -69,60 +87,53 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="md:hidden flex items-center">
-            <button
-              className="outline-none relative w-6 h-6"
-              onClick={toggleMenu}
-            >
-              <img
-                src="/menu.svg"
-                alt="menu"
-                className={`absolute inset-0 w-6 h-6 duration-300 ${
-                  isOpen ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <img
-                src="/close.svg"
-                alt="close"
-                className={`absolute inset-0 w-6 h-6 ${
-                  isOpen ? "opacity-100" : "opacity-0"
-                }`}
-              />
-            </button>
+            <HamburgerIcon open={isOpen} onClick={toggleMenu} />
           </div>
         </div>
       </div>
     </nav>
       {isOpen && (
-        <div ref={container} id="mobile-nav" className="fixed inset-0 z-50 bg-black bg-opacity-75 backdrop-blur-md">
+        <>
+          {/* Overlay */}
+          <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm animate-fade-in" onClick={toggleMenu}></div>
+          {/* Slide-down menu with fold-up animation on close */}
           <div
-            id='mobile-nav' className={`fixed inset-y-0 right-0 w-2/3 md:hidden bg-blue-950 shadow-xl  ${
-              isOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+            id='mobile-nav'
+            className={`fixed left-0 top-16 z-50 w-full h-[65vh] bg-gradient-to-br from-blue-900/90 via-blue-800/80 to-purple-900/90 shadow-2xl rounded-b-3xl border-b border-white/20 px-6 pt-6 flex flex-col items-center ${isClosing ? 'animate-fold-up' : 'animate-slide-down'}`}
           >
-            <button
-              className="absolute top-4 right-4 z-50"
+            {/* Z Logo at the top center */}
+            {/* <div className="flex justify-center items-center w-full mb-6 mt-2">
+              <ZLogo size={40} autoAnimate={true} />
+            </div> */}
+            {/* Close button (no background/blur) */}
+            {/* <button
+              className="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center transition"
               onClick={toggleMenu}
+              aria-label="Close menu"
+              type="button"
             >
-              <img src="/close.svg" alt="close" className="w-6 h-6" />
-            </button>
-            <ul className="pt-16 pb-6 flex flex-col items-center space-y-6">
+              <HamburgerIcon open={true} className="w-10 h-10 text-white"/>
+            </button> */}
+            {/* Nav links */}
+            <ul className="flex-1 w-full flex flex-col items-center justify-center space-y-4">
               {navLinks.map((item) => (
-                <li id="mobile-links" key={item.id}>
+                <li id="mobile-links" key={item.id} className="w-full">
                   <Link
                     to={item.href.replace("#", "")}
                     smooth={true}
                     duration={300}
                     offset={0}
-                    className="text-lg font-medium text-neutral-300 hover:text-teal-400 transition duration-300"
+                    className="group block w-full text-lg font-semibold text-neutral-100 rounded-xl px-4 py-3 text-center hover:bg-white/10 hover:text-teal-400 transition-all duration-200 shadow-sm backdrop-blur-md flex items-center justify-between"
                     onClick={handleLinkClick}
                   >
-                    {item.name}
+                    <span className="mx-auto">{item.name}</span>
+                    {/* <ChevronRightIcon className="w-5 h-5 text-teal-400 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition" /> */}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-        </div>
+        </>
       )}
     </>
     
