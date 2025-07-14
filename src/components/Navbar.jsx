@@ -6,6 +6,7 @@ import { firaCode } from "@/fonts/fonts";
 import { Link } from "react-scroll";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import ZLogo from "./ZLogo";
 
 const Navbar = () => {
 
@@ -46,9 +47,7 @@ const Navbar = () => {
           <div className="flex space-x-7">
             <div id='logo'>
               <Link to="top" smooth={true} duration={300} offset={0} className="flex items-center py-4 px-2 cursor-pointer">
-                <span className="font-semibold text-neutral-300 text-lg">
-                  YPK
-                </span>
+                <ZLogo size={36} autoAnimate={true} />
               </Link>
             </div>
           </div>

@@ -3,20 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: radial-gradient(
-      circle,
-      rgba(9, 0, 41, 1) 26%,
-      rgba(8, 17, 77, 1) 73%,
-      rgba(12, 27, 28, 1) 100%
-    );
-    --foreground: #ededed;
-  }
+  --background: radial-gradient(
+    circle,
+    rgba(9, 0, 41, 1) 26%,
+    rgba(8, 17, 77, 1) 73%,
+    rgba(12, 27, 28, 1) 100%
+  );
+  --foreground: #ededed;
 }
 
 html,
@@ -119,4 +112,28 @@ li::marker {
 .slick-slide > div {
   transform: none;
   opacity: 1;
+}
+
+/* Custom animations for Z Logo */
+@keyframes draw {
+  0% {
+    stroke-dasharray: 0 1000;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 1000 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw {
+  animation: draw 2s ease-in-out infinite;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.hover\:animate-draw:hover {
+  animation: draw 2s ease-in-out;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
 }
