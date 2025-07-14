@@ -8,8 +8,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ZLogo from "./ZLogo";
 import HamburgerIcon from "./HamburgerIcon";
-import ChevronRightIcon from "./ChevronRightIcon";
-import CloseIcon from "./CloseIcon";
 
 const Navbar = () => {
 
