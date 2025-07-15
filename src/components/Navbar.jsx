@@ -21,7 +21,7 @@ const Navbar = () => {
     setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
-    }, 400); // match animation duration
+    }, 600); // match animation duration
   };
 
   const toggleMenu = () => {
@@ -97,20 +97,7 @@ const Navbar = () => {
             id='mobile-nav'
             className={`fixed left-0 top-16 z-50 w-full h-[65vh] bg-gradient-to-br from-blue-900/90 via-blue-800/80 to-purple-900/90 shadow-2xl rounded-b-3xl border-b border-white/20 px-6 pt-6 flex flex-col items-center ${isClosing ? 'animate-fold-up' : 'animate-slide-down'}`}
           >
-            {/* Z Logo at the top center */}
-            {/* <div className="flex justify-center items-center w-full mb-6 mt-2">
-              <ZLogo size={40} autoAnimate={true} />
-            </div> */}
-            {/* Close button (no background/blur) */}
-            {/* <button
-              className="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center transition"
-              onClick={toggleMenu}
-              aria-label="Close menu"
-              type="button"
-            >
-              <HamburgerIcon open={true} className="w-10 h-10 text-white"/>
-            </button> */}
-            {/* Nav links */}
+           
             <ul className="flex-1 w-full flex flex-col items-center justify-center space-y-4">
               {navLinks.map((item) => (
                 <li id="mobile-links" key={item.id} className="w-full">
