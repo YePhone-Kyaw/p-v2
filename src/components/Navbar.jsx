@@ -15,6 +15,15 @@ const Navbar = () => {
   const [isClosing, setIsClosing] = useState(false);
   const [previousScroll, setPreviousScroll] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Small delay to ensure smooth transition from loading screen
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, []);
 
   const closeMenu = () => {
     setIsClosing(true);
@@ -39,9 +48,11 @@ const Navbar = () => {
   const container = useRef();
   
   useGSAP(() => {
+    if (!isLoaded) return;
+    
     gsap.timeline().from('#logo', {y: -30, opacity: 0})
     .from('#nav-links', {y: -30, opacity: 0, stagger: 0.3})
-  }, {scope: container})
+  }, {scope: container, dependencies: [isLoaded]})
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +68,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav ref={container} className={`fixed top-0 left-0 right-0 transition-transform duration-300 z-50 ${visible ? 'translate-y-0' : '-translate-y-full'}  bg-opacity-50 shadow-md backdrop-filter backdrop-blur-md `}>
+    <nav ref={container} className={`fixed top-0 left-0 right-0 transition-all duration-500 z-50 ${visible ? 'translate-y-0' : '-translate-y-full'} ${isLoaded ? 'opacity-100' : 'opacity-0'} bg-opacity-50 shadow-md backdrop-filter backdrop-blur-md `}>
       <div className="max-w-8xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-7">

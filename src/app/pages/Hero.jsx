@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useRef } from "react";
+import React, { Suspense, useRef, useEffect, useState } from "react";
 import { calculateSizes, socialMedia } from "../constants";
 import Icon from "../../components/icon";
 import gsap from "gsap";
@@ -19,24 +19,35 @@ import { DockerLogo } from "@/components/3d-logos/DockerLogo";
 
 const Hero = () => {
   const container = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Small delay to ensure smooth transition from loading screen
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   useGSAP(
     () => {
+      if (!isVisible) return;
+      
       gsap
         .timeline()
-        .from("#intro", { y: -50, opacity: 0, ease: "back", delay: 2 })
+        .from("#intro", { y: -50, opacity: 0, ease: "back", delay: 0.5 })
         .from("#name", { y: -50, opacity: 0, ease: "back" })
         .from("#text", { y: -50, opacity: 0, ease: "back" })
         .from("#hero", { y: -50, opacity: 0, ease: "back" })
         .from("#socials", { y: -50, stagger: 0.3, opacity: 0, ease: "bounce" });
     },
-    { scope: container }
+    { scope: container, dependencies: [isVisible] }
   );
 
   return (
     <section
       id="top"
-      className="flex items-center justify-center min-h-screen px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32"
+      className={`flex items-center justify-center min-h-screen px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       <div ref={container} className="w-full max-w-5xl relative z-10">
         <div className="flex flex-col gap-3">
