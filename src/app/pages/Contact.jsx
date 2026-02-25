@@ -1,39 +1,8 @@
 "use client";
-import React, { useState } from "react";
 import { email } from "../constants";
 import { firaCode } from "@/fonts/fonts";
 
 const Contact = () => {
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // });
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const [status, setStatus] = useState(null);
-
-  const handleSetName = (e) => setName(e.target.value);
-  const handleSetEmail = (e) => setEmail(e.target.value);
-  const handleSetMessage = (e) => setMessage(e.target.value);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!name || !email || !message) {
-      setStatus({ type: "error", message: "Please fill in all fields." });
-      return;
-    }
-
-    setStatus({
-      type: "success",
-      message: "Thank you for reaching out! I will get back to you soon.",
-    });
-    setEmail("");
-    setName("");
-    setMessage("");
-  };
   return (
     <section
       id="contact"

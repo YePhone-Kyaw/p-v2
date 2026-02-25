@@ -17,7 +17,7 @@ const HamburgerIcon = ({ open, className = '', ...props }) => (
       rx={1}
       className="fill-current text-neutral-200"
       style={{
-        transition: 'y 0.4s cubic-bezier(.77,0,.18,1), transform 0.4s cubic-bezier(.77,0,.18,1)',
+        transition: 'y 0.05s cubic-bezier(.77,0,.18,1), transform 0.05s cubic-bezier(.77,0,.18,1)',
         transformOrigin: '20px 21px',
         transform: open ? 'rotate(45deg)' : 'none',
       }}
@@ -31,7 +31,7 @@ const HamburgerIcon = ({ open, className = '', ...props }) => (
       rx={1}
       className="fill-current text-neutral-200"
       style={{
-        transition: 'opacity 0.4s cubic-bezier(.77,0,.18,1), transform 0.4s cubic-bezier(.77,0,.18,1)',
+        transition: 'opacity 0.05s cubic-bezier(.77,0,.18,1), transform 0.05s cubic-bezier(.77,0,.18,1)',
         transformOrigin: '20px 21px',
         opacity: open ? 0 : 1,
         transform: open ? 'scaleX(0.1)' : 'scaleX(1)',
@@ -46,7 +46,7 @@ const HamburgerIcon = ({ open, className = '', ...props }) => (
       rx={1}
       className="fill-current text-neutral-200"
       style={{
-        transition: 'y 0.4s cubic-bezier(.77,0,.18,1), transform 0.4s cubic-bezier(.77,0,.18,1)',
+        transition: 'y 0.05s cubic-bezier(.77,0,.18,1), transform 0.05s cubic-bezier(.77,0,.18,1)',
         transformOrigin: '20px 21px',
         transform: open ? 'rotate(-45deg)' : 'none',
       }}
