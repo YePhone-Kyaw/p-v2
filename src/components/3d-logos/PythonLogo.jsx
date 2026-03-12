@@ -7,29 +7,29 @@ export function PythonLogo(props) {
   const scene = useGLTF('/models/python.glb');
   const pythonRef = useRef();
   const [position, setPosition] = useState([-21, -10, 0]);
-    const [scale, setScale] = useState(0.008);
+    const [scale, setScale] = useState(0.006);
   
     useEffect(() => {
       const updateDimensions = () => {
         const width = window.innerWidth;
         if (width < 640) {
           setPosition([-8, -10, 0]);
-          setScale(0.003);
+          setScale(0.004);
         } else if (width < 768) {
           setPosition([-10, -10, 0]);
-          setScale(0.003);
+          setScale(0.004);
         } else if (width < 1024) {
           setPosition([-13, -10, 0]);
-          setScale(0.003)
+          setScale(0.004)
         } else if (width < 1280) {
           setPosition([-14, -10, 0]);
-          setScale(0.003)
+          setScale(0.004)
         } else if (width < 1440) {
           setPosition([-18, -10, 0]);
-          setScale(0.004)
+          setScale(0.005)
         } else {
           setPosition([-21, -10, 0]);
-          setScale(0.005);
+          setScale(0.006);
         }
       };
       window.addEventListener('resize', updateDimensions);
@@ -51,7 +51,7 @@ export function PythonLogo(props) {
   // })
   return (
     <Float floatIntensity={1}>
-      <group {...props} ref={pythonRef} dispose={null} scale={0.005}>
+      <group {...props} ref={pythonRef} dispose={null} scale={scale}>
         <mesh
           castShadow
           receiveShadow
@@ -65,5 +65,5 @@ export function PythonLogo(props) {
   )
 }
 
-useGLTF.preload('/methods/python.glb')
+useGLTF.preload('/models/python.glb')
 

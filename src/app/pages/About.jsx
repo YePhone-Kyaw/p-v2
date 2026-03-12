@@ -59,9 +59,9 @@ const About = () => {
 
           <div className="flex flex-col w-full items-center">
             <img
-              src="/me.jpg"
+              src="/me.png"
               alt="profile"
-              className="photo h-72 w-64 mb-10 rounded-lg opacity-90"
+              className="photo w-52 mb-10"
             />
 
             <div className="buttons flex flex-col sm:flex-row items-center gap-3 justify-around sm:w-[320px] w-full">

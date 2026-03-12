@@ -1,10 +1,48 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef, useState, useEffect } from 'react'
+import { Float, useGLTF } from '@react-three/drei'
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 export function DockerLogo(props) {
   const { nodes, materials } = useGLTF('/models/docker.glb')
+  const dockerRef = useRef();
+  const [position, setPosition] = useState([8, 0, 5]);
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setPosition([3, 0, 5])
+      } else if (width < 768) {
+        setPosition([4, 0, 5])
+      } else if (width < 1024) {
+        setPosition([5, 0, 5])
+      } else if (width < 1280) {
+        setPosition([6, 0, 5])
+      } else {
+        setPosition([8, 0, 5])
+      }
+    };
+    window.addEventListener('resize', updateDimensions);
+    updateDimensions();
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
+
+  useEffect(() => {
+    if (dockerRef.current) {
+      dockerRef.current.position.set(...position);
+    }
+  }, [position]);
+
+  useGSAP(() => {
+    if (dockerRef.current)  {
+      gsap.from(dockerRef.current.position, {duration: 2, repeat: -1, yoyo: true, ease: 'power2.inOut'})
+    }
+  }, []);
+
   return (
-    <group {...props} dispose={null}>
+    <Float floatIntensity={1}>
+    <group {...props} ref={dockerRef} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.488}>
         <mesh
           castShadow
@@ -128,6 +166,7 @@ export function DockerLogo(props) {
         />
       </group>
     </group>
+    </Float>
   )
 }
 

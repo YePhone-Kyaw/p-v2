@@ -9,7 +9,7 @@ const ProjectCard = ({
   languages,
   children,
 }) => (
-  <div className="flex flex-col items-center p-3 border-2 border-teal-300 bg-teal-600/20 w-[300px] rounded-xl hover:scale-[1.02] transition-transform ">
+  <div className="flex flex-col items-center p-3 border border-teal-300/40 bg-white/5 backdrop-blur-lg w-[300px] rounded-xl hover:scale-[1.02] hover:bg-white/10 hover:border-teal-400/60 hover:shadow-2xl hover:shadow-teal-500/20 transition-all duration-300">
     <div className="h-40 w-full items-center">
       <img
         src={image}
@@ -21,14 +21,14 @@ const ProjectCard = ({
         }
       />
     </div>
-    <div className={`${poppins.className}flex flex-col items-center mt-3`}>
-      <h3 className="text-lg font-bold">{title}</h3>
-      <p className="mb-2 text-md">{description}</p>
-      <ul className="flex flex-wrap gap-2">
+    <div className={`${poppins.className} flex flex-col items-center mt-3`}>
+      <h3 className="text-lg font-bold text-teal-300">{title}</h3>
+      <p className="mb-2 text-md text-neutral-300">{description}</p>
+      <ul className="flex flex-wrap gap-2 justify-center">
         {(languages || []).map((lang, i) => (
           <li
             key={lang + i}
-            className="px-2 py-1 bg-teal-600/30 rounded text-teal-300 text-xs"
+            className="px-2 py-1 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200"
           >
             {lang}
           </li>

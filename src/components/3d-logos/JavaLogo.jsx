@@ -13,17 +13,17 @@ export function JavaLogo(props) {
     const updatePosition = () => {
       const width = window.innerWidth
       if (width < 640) {
-        setPosition([-8, 7, 3])
+        setPosition([-8, -1, 3])
       } else if (width < 768) {
-        setPosition([-9, 7, 3])
+        setPosition([-9, -1, 3])
       } else if (width < 1024) {
-        setPosition([-10, 7, 3])
+        setPosition([-10, -1, 3])
       } else if (width < 1280) {
-        setPosition([-12, 7, 3])
+        setPosition([-12, -1, 3])
       } else if (width < 1440) {
-        setPosition([-12, 7, 3])
+        setPosition([-12, -1, 3])
       } else {
-        setPosition([-14, 7, 3])
+        setPosition([-14, -1, 3])
       }
     }
     window.addEventListener('resize', updatePosition)
@@ -49,7 +49,7 @@ useGSAP(() => {
   }, [])
   return (
     <Float floatIntensity={1}>
-        <group ref={javaRef} {...props} dispose={null}>
+        <group ref={javaRef} {...props} dispose={null} scale={0.7}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="Root">

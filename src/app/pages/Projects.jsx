@@ -18,7 +18,7 @@ const CustomArrow = ({ type, onClick }) => {
   const isNext = type === "next";
   return (
     <button
-      className={`arrows absolute top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-teal-600/50 text-teal-300 hover:bg-teal-400/60
+      className={`arrows absolute top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-teal-700/50 border-2 border-teal-300 text-teal-300 hover:bg-teal-600/60 hover:border-teal-200 hover:scale-110 hover:shadow-md hover:shadow-teal-500/50 transition-all duration-300
                   ${isNext ? "right-0 md:-right-12" : "left-0 md:-left-12"}`}
       onClick={onClick}
       aria-label={isNext ? "Next Project" : "Previous Project"}
@@ -72,9 +72,8 @@ const Experience = () => {
           start: 'top center',
         }
       })
-      .from('.title', {opacity: 0, x:300})
+      .from('.title', {opacity: 0, x: 300})
       .from('.cards', {opacity:0, y: 100, delay:0.5})
-      .from('.arrows', {opacity:0, y: 100})
     },
     { scope: container }
   );

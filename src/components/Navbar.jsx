@@ -17,7 +17,6 @@ const Navbar = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Small delay to ensure smooth transition from loading screen
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 200);
@@ -29,7 +28,7 @@ const Navbar = () => {
     setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
-    }, 400); // match animation duration
+    }, 400);
   };
 
   const toggleMenu = () => {

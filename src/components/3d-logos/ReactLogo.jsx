@@ -13,23 +13,22 @@ export function ReactLogo(props) {
     const updateDimensions = () => {
       const width = window.innerWidth;
       if (width < 640) {
-        setPosition([3, 8, 5]);
-        setScale(0.003);
-      } else if (width < 768) {
-        setPosition([5, 8, 5]);
-        setScale(0.003);
-      } else if (width < 1024) {
-        setPosition([6, 8, 5]);
-        setScale(0.003)
-      }  else if (width < 1280) {
-        setPosition([10, 8, 5]);
-        setScale(0.003);
-      } else if (width < 1440) {
-        setPosition([13, 8, 5]);
-        setScale(0.004);
-      } else {
-        setPosition([15, 8, 5]);
+        setPosition([1, 7, 5]);
         setScale(0.005);
+      } else if (width < 768) {
+        setPosition([3, 7, 5]);
+        setScale(0.005);
+      } else if (width < 1024) {
+        setPosition([5, 7, 5]);
+        setScale(0.006)
+      }  else if (width < 1280) {
+        setPosition([7, 7, 5]);
+        setScale(0.006);
+      } else if (width < 1440) {
+        setPosition([9, 7, 5]);
+        setScale(0.007);
+      } else {
+        setPosition([12, 7, 5]);
       }
     };
     window.addEventListener('resize', updateDimensions);
