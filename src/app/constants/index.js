@@ -144,7 +144,7 @@ export const projects = [
     id: 3,
     image: "/powershift.png",
     title: "PowerShift Scheduler",
-    description: "A modern portfolio built with React and Tailwind CSS.",
+    description: "A react scheduler mainly aimed for restaurant scheduling system.",
     languages: [
       "React + Vite",
       "Tailwind CSS",
