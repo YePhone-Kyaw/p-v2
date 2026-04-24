@@ -28,6 +28,12 @@ import IconFirebase from '@/components/icons/firebase';
 import IconVercel from '@/components/icons/vercel';
 import IconNetlify from '@/components/icons/netlify';
 import IconFigma from '@/components/icons/figma';
+import IconAWS from '@/components/icons/aws';
+import IconNginx from '@/components/icons/nginx';
+import IconDigitalOcean from '@/components/icons/digitalocean';
+import IconExpress from '@/components/icons/express';
+import IconVue from '@/components/icons/vue';
+import IconDNS from '@/components/icons/dns';
 import { firaCode } from '@/fonts/fonts';
 
 const icons = [
@@ -36,7 +42,9 @@ const icons = [
   IconReact, IconNextJS, IconNodeJS, IconTailwind,
   IconNumpy, IconMySQL, IconMongoDB, IconPostgreSQL,
   IconGit, IconGH, IconDocker, IconPostman,
-  IconFirebase, IconVercel, IconNetlify, IconFigma
+  IconFirebase, IconVercel, IconNetlify, IconFigma,
+  IconAWS, IconNginx, IconDigitalOcean,
+  IconExpress, IconVue, IconDNS
 ];
 
 const animationTypes = ['float', 'rotate', 'scale', 'wiggle'];

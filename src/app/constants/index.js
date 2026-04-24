@@ -233,7 +233,7 @@ export const socialMedia = [
   {
     id: 2,
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/ye-phone-kyaw-george-1161a7223/",
+    href: "https://www.linkedin.com/in/ye-phone-kyaw-zayden-1161a7223/",
   },
   {
     id: 3,
