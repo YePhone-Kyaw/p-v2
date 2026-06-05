@@ -113,14 +113,25 @@ export const cards = [
 export const projects = [
   {
     id: 1,
-    image: "/portfolio.png",
-    title: "My Portfolio",
+    image: "/rosa.png",
+    title: "Rosa E-commerce",
     description:
-      "A modern, responsive portfolio showing my skills, projects as a software developer.",
-    languages: ["ThreeJS", "React", "Tailwind CSS", "JavaScript"],
+      "A full -stack e-commerce platform with real-time order tracking, Stripe payment, and S3 image uploads.",
+    languages: [
+      "C#",
+      "ASP.NET Core",
+      "Next.js",
+      "TypeScript",
+      "MySQL",
+      "Docker",
+      "AWS",
+      "Stripe",
+      "SignalR",
+      "Tailwind CSS",
+    ],
     linkIcon: <IconExternal />,
-    url: "https://p-v1-three.vercel.app/",
-    githubUrl: "https://github.com/YePhone-Kyaw/p-v2",
+    url: "https://rosa.ink",
+    githubUrl: "https://github.com/YePhone-Kyaw/rosa",
   },
   {
     id: 2,
@@ -144,6 +155,17 @@ export const projects = [
   },
   {
     id: 3,
+    image: "/portfolio.png",
+    title: "My Portfolio",
+    description:
+      "A modern, responsive portfolio showing my skills, projects as a software developer.",
+    languages: ["ThreeJS", "React", "Tailwind CSS", "JavaScript"],
+    linkIcon: <IconExternal />,
+    url: "https://p-v1-three.vercel.app/",
+    githubUrl: "https://github.com/YePhone-Kyaw/p-v2",
+  },
+  {
+    id: 4,
     image: "/music-app1.png",
     title: "Muzic",
     description:
@@ -161,21 +183,29 @@ export const projects = [
     githubUrl: "https://github.com/YePhone-Kyaw/music-app",
   },
   {
-    id: 4,
+    id: 5,
     image: "/petcare.png",
     title: "Pet Care",
-    description:
-      "A pet adoption platform for dog and cat lovers.",
-    languages: ["Next.js", "React", "Tailwind CSS", "JavaScript", "Firebase", "Firestore Authentications", "The dog&cat APIs"],
+    description: "A pet adoption platform for dog and cat lovers.",
+    languages: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "Firebase",
+      "Firestore Authentications",
+      "The dog&cat APIs",
+    ],
     linkIcon: <IconExternal />,
     url: "https://pet-care-iota-bay.vercel.app/",
     githubUrl: "https://github.com/YePhone-Kyaw/p-v2",
   },
   {
-    id: 5,
+    id: 6,
     image: "/powershift.png",
     title: "PowerShift Scheduler",
-    description: "A react scheduler mainly aimed for restaurant scheduling system.",
+    description:
+      "A react scheduler mainly aimed for restaurant scheduling system.",
     languages: [
       "React + Vite",
       "Tailwind CSS",
