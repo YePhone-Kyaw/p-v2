@@ -18,6 +18,7 @@ import { NodeJsLogo } from "@/components/3d-logos/NodeJsLogo";
 import { DockerLogo } from "@/components/3d-logos/DockerLogo";
 import { VueLogo } from "@/components/3d-logos/VueLogo";
 import { MongoDBLogo } from "@/components/3d-logos/MongoDBLogo";
+import { CSharpLogo } from "@/components/3d-logos/CSharpLogo";
 
 const Hero = () => {
   const container = useRef();
@@ -119,6 +120,7 @@ const Hero = () => {
             />
             <group>
               <ReactLogo />
+              <CSharpLogo />
               <VueLogo />
               <PythonLogo />
               <MongoDBLogo />
