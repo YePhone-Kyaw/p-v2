@@ -38,7 +38,7 @@ import { firaCode } from '@/fonts/fonts';
 
 const icons = [
   IconHtml, IconCss, IconJavaScript, IconThreeJs,
-  IconTypeScript, IconJava, IconPython, IconCSharp,
+  IconTypeScript, IconCSharp, IconJava, IconPython,
   IconReact, IconNextJS, IconNodeJS, IconTailwind,
   IconNumpy, IconMySQL, IconMongoDB, IconPostgreSQL,
   IconGit, IconGH, IconDocker, IconPostman,
