@@ -43,12 +43,6 @@ export function PythonLogo(props) {
         pythonRef.current.scale.set(scale, scale, scale);    
       }
     }, [position, scale]);
-
-  // useGSAP(() => {
-  //   if (pythonRef.current) {
-  //     gsap.to(pythonRef.current.position, {duration: 1, repeat: -1, yoyo: true})
-  //   }
-  // })
   return (
     <Float floatIntensity={1}>
       <group {...props} ref={pythonRef} dispose={null} scale={scale}>
