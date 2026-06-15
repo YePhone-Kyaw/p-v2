@@ -3,7 +3,7 @@ import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
-  title: "Ye Phone Kyaw ",
+  title: "Ye Phone Kyaw",
   description: "My Portfolio",
 };
 

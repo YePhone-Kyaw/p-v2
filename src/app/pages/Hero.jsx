@@ -35,7 +35,7 @@ const Hero = () => {
   useGSAP(
     () => {
       if (!isVisible) return;
-      
+
       gsap
         .timeline()
         .from("#intro", { y: -50, opacity: 0, ease: "back", delay: 0.5 })
@@ -44,13 +44,13 @@ const Hero = () => {
         .from("#hero", { y: -50, opacity: 0, ease: "back" })
         .from("#socials", { y: -50, stagger: 0.3, opacity: 0, ease: "bounce" });
     },
-    { scope: container, dependencies: [isVisible] }
+    { scope: container, dependencies: [isVisible] },
   );
 
   return (
     <section
       id="top"
-      className={`flex items-center justify-center min-h-screen px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={`flex items-center justify-center min-h-screen px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 transition-opacity duration-500 ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
       <div ref={container} className="w-full max-w-5xl relative z-10">
         <div className="flex flex-col gap-3">
@@ -58,11 +58,15 @@ const Hero = () => {
             Hi there, my name is{" "}
           </h5>
           <div className={`${firaCode.className}`}>
-            <div id="name"  className="flex items-end gap-5 font-sans font-bold mb-5">
+            <div
+              id="name"
+              className="flex items-end gap-5 font-sans font-bold mb-5"
+            >
               <h1 className="text-4xl md:text-5xl lg:text-6xl">
                 Ye Phone Kyaw
               </h1>
-              <h3 className="text-lg md:text-xl lg:text-2xl">(Zayden)</h3>
+              <h3 className="text-lg md:text-xl lg:text-2xl text-teal-400">Aka</h3>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl">Zayden</h1>
             </div>
             <div id="text">
               <TypeAnimation
