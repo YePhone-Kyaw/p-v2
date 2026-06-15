@@ -102,6 +102,21 @@ const Experience = () => {
                   for production UI workflows.
                 </span>
               </li>
+              <li className="flex gap-3">
+                <span className="text-teal-400 mt-1">▹</span>
+                <span>
+                  Contributed to four interconnected applications including{" "}
+                  <a
+                    href="https://ally.itphub.ca"
+                    target="_blank"
+                    className="text-teal-300 hover:text-teal-400 underline"
+                  >
+                    Ally User App
+                  </a>{" "}
+                  (public), Advisor App, Firebase Cloud Functions, and Admin
+                  Portal.
+                </span>
+              </li>
             </ul>
           </div>
 
