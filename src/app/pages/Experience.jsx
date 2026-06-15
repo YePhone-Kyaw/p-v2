@@ -23,7 +23,7 @@ const Experience = () => {
         },
       });
     },
-    { scope: container }, []
+    { scope: container },
   );
 
   return (
@@ -42,14 +42,20 @@ const Experience = () => {
         <div className="experience-card border border-teal-300/40 bg-white/5 backdrop-blur-md rounded-xl p-6 hover:scale-[1.02] hover:bg-white/10 hover:border-teal-400/60 hover:shadow-2xl hover:shadow-teal-500/20 transition-all duration-300">
           <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
             <div>
-              <h2 className={`${firaCode.className} text-xl font-bold text-teal-300`}>
+              <h2
+                className={`${firaCode.className} text-xl font-bold text-teal-300`}
+              >
                 Full Stack Developer
               </h2>
-              <h3 className={`${poppins.className} text-lg text-neutral-200 mt-1`}>
+              <h3
+                className={`${poppins.className} text-lg text-neutral-200 mt-1`}
+              >
                 Bluejarvis Technology Inc.
               </h3>
             </div>
-            <span className={`${firaCode.className} text-sm text-teal-400 whitespace-nowrap`}>
+            <span
+              className={`${firaCode.className} text-sm text-teal-400 whitespace-nowrap`}
+            >
               Aug 2025 - Feb 2026
             </span>
           </div>
@@ -59,44 +65,56 @@ const Experience = () => {
               <li className="flex gap-3">
                 <span className="text-teal-400 mt-1">▹</span>
                 <span>
-                  Developed and integrated full-stack web applications with comprehensive testing and quality assurance
+                  Built a rules-based recommendation engine integrating
+                  third-party jobs APIs, Elasticsearch, and Google Gemini via
+                  Genkit to surface AI-assisted structured results.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-teal-400 mt-1">▹</span>
                 <span>
-                  Conducted security testing and performance monitoring to enhance user experience and system reliability
+                  Developed authenticated RESTful API endpoints and serverless
+                  Cloud Functions integrating AWS SES, LinkedIn OAuth, and
+                  Google Analytics Data API.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-teal-400 mt-1">▹</span>
                 <span>
-                  Collaborated on software architecture design and participated in technical research for interactive media solutions
+                  Implemented role-based access control using Firebase
+                  Authentication custom claims and global route middleware
+                  enforcing admin-only access across all SPA surfaces.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-teal-400 mt-1">▹</span>
                 <span>
-                  Worked on four interconnected applications: 
-                  <a 
-                    href="https://ally.itphub.ca" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-teal-300 hover:text-teal-400 underline mx-1"
-                  >
-                    Ally User App
-                  </a>
-                  (public), Advisor App, Firebase Cloud Functions, and Admin Portal
+                  Built real-time analytics dashboards with ApexCharts featuring
+                  date filtering, responsive layouts, and optimized backend
+                  processing with caching strategies.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-teal-400 mt-1">▹</span>
+                <span>
+                  Wrote comprehensive unit tests with Mocha, Chai, and Sinon,
+                  and authored Playwright E2E tests with global setup/teardown
+                  for production UI workflows.
                 </span>
               </li>
             </ul>
           </div>
 
           <div className={`${poppins.className}`}>
-            <h4 className="text-sm font-semibold text-teal-300 mb-3">Tech Stack:</h4>
+            <h4 className="text-sm font-semibold text-teal-300 mb-3">
+              Tech Stack:
+            </h4>
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
                 Vue.js
+              </span>
+              <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
+                TypeScript
               </span>
               <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
                 Firebase
@@ -108,13 +126,37 @@ const Experience = () => {
                 Firestore
               </span>
               <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
+                Docker
+              </span>
+              <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
+                AWS SES
+              </span>
+              <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
                 Node.js
               </span>
               <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
-                TypeScript
+                REST APIs
               </span>
               <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
-                REST API
+                Elasticsearch
+              </span>
+              <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
+                Genkit
+              </span>
+              <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
+                ApexCharts
+              </span>
+              <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
+                Playwright
+              </span>
+              <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
+                Mocha
+              </span>
+              <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
+                Chai
+              </span>
+              <span className="px-3 py-1.5 bg-white/5 backdrop-blur-md border border-teal-400/30 rounded-lg text-teal-300 text-xs hover:bg-white/10 hover:border-teal-400/50 transition-all duration-200">
+                Sinon
               </span>
             </div>
           </div>
