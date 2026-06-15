@@ -14,21 +14,26 @@ export const navLinks = [
   },
   {
     id: 2,
+    name: "Experience",
+    href: "#experience",
+  },
+  {
+    id: 3,
     name: "Projects",
     href: "#projects",
   },
   {
-    id: 3,
+    id: 4,
     name: "Award",
     href: "#awards",
   },
   {
-    id: 4,
+    id: 5,
     name: "Skills",
     href: "#skills",
   },
   {
-    id: 5,
+    id: 6,
     name: "Contact",
     href: "#contact",
   },
@@ -45,7 +50,7 @@ export const cards = [
     children: (
       <>
         Develop responsive high performance web applications using modern
-        frameworks like React, Vue for frontend and Node.js, Laravel for backend
+        frameworks like React, Vue, Next for frontend, Node.js, ASP.NET Core for backend
       </>
     ),
   },
@@ -116,7 +121,7 @@ export const projects = [
     image: "/rosa.png",
     title: "Rosa E-commerce",
     description:
-      "A full -stack e-commerce platform with real-time order tracking, Stripe payment, and S3 image uploads.",
+      "A full-stack e-commerce platform with real-time order tracking, Stripe payment, and S3 image uploads.",
     languages: [
       "C#",
       "ASP.NET Core",
@@ -147,10 +152,10 @@ export const projects = [
       "Tailwind CSS",
       "Express.js",
       "Axios",
-      "RESTfulAPIs",
+      "RESTful APIs",
     ],
     linkIcon: <IconExternal />,
-    url: "https://yephonekyaw.com",
+    url: "https://zrecipes.xyz",
     githubUrl: "https://github.com/YePhone-Kyaw/Z-Recipes",
   },
   {
@@ -198,7 +203,7 @@ export const projects = [
     ],
     linkIcon: <IconExternal />,
     url: "https://pet-care-iota-bay.vercel.app/",
-    githubUrl: "https://github.com/YePhone-Kyaw/p-v2",
+    githubUrl: "https://github.com/YePhone-Kyaw/PetCare",
   },
   {
     id: 6,
@@ -216,41 +221,6 @@ export const projects = [
     ],
     linkIcon: <IconExternal />,
     githubUrl: "https://github.com/YePhone-Kyaw/React-Scheduler",
-  },
-];
-
-export const skills = [
-  {
-    id: 1,
-    name: "JavaScript",
-  },
-  {
-    id: 2,
-    name: "React",
-  },
-  {
-    id: 3,
-    name: "TypeScript",
-  },
-  {
-    id: 4,
-    name: "HTML",
-  },
-  {
-    id: 5,
-    name: "CSS",
-  },
-  {
-    id: 6,
-    name: "Python",
-  },
-  {
-    id: 7,
-    name: "Java",
-  },
-  {
-    id: 8,
-    name: "C#",
   },
 ];
 
