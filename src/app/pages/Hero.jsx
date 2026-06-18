@@ -62,11 +62,11 @@ const Hero = () => {
               id="name"
               className="flex items-end gap-5 font-sans font-bold mb-5"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl">
                 Ye Phone Kyaw
               </h1>
               <h3 className="text-lg md:text-xl lg:text-2xl text-teal-400">Aka</h3>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl">Zayden</h1>
+              <h1 className="text-2xl md:text-4xl lg:text-5xl">Zayden</h1>
             </div>
             <div id="text">
               <TypeAnimation
